@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/", "destination": "/LP Unique/index.html" },
+    { "source": "/check-in", "destination": "/LP Unique/check-in.html" },
+    { "source": "/admin", "destination": "/LP Unique/admin.html" },
     { "source": "/(.*)", "destination": "/LP Unique/$1" }
   ]
 }
