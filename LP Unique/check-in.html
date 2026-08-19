@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.replace("no-js", "js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Check-in · Club Unique Experience Edition</title>
+<meta name="description" content="Confirme sua presença na Experience Edition do Club Unique." />
+<meta name="robots" content="noindex, nofollow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Public+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-shell">
+
+<a class="skip-link" href="#checkin-heading">Pular para o formulário</a>
+
+<header class="page-header">
+  <div class="container page-header__inner">
+    <div class="page-header__brand">
+      <p class="page-header__subtitle">Club Unique · Experience Edition</p>
+      <h1 class="page-header__title" id="checkin-heading">Check-in de presença</h1>
+    </div>
+    <a class="btn btn--outline" href="index.html">Voltar ao convite</a>
+  </div>
+</header>
+
+<main class="page-main">
+  <div class="container container--narrow">
+    <div class="form-panel">
+      <div class="form-panel__edition">
+        <span class="form-panel__edition-label" id="checkin-edition-label">Experience Edition</span>
+        <p class="form-panel__edition-date" id="checkin-edition-date">Sábado, 22 de agosto de 2026</p>
+        <p class="form-panel__edition-place" id="checkin-edition-place">Reserva Laguna · Alphaville Nova Lima</p>
+      </div>
+
+      <p class="form-note" id="checkin-intro">Preencha seus dados para confirmar presença e agilizar o credenciamento no dia do evento. Este convite é pessoal e intransferível.</p>
+
+      <div class="checkin-flow" id="checkin-flow">
+        <form id="checkin-form" class="form-grid" novalidate>
+          <input type="hidden" id="edition" name="edition" value="2026-08-22" />
+
+          <div class="form-field">
+            <label for="full_name">Nome completo</label>
+            <input id="full_name" name="full_name" type="text" autocomplete="name" required placeholder="Seu nome completo" />
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Telefone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" required placeholder="(00) 00000-0000" maxlength="15" />
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="seu@email.com" spellcheck="false" autocapitalize="none" />
+          </div>
+
+          <div class="form-field">
+            <label for="company">Empresa</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Nome da empresa" />
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary checkin-submit" type="submit" id="checkin-submit">
+              <span class="checkin-submit__label">Confirmar presença</span>
+              <span class="checkin-submit__loading" aria-hidden="true">Confirmando…</span>
+            </button>
+          </div>
+
+          <p class="form-feedback" id="checkin-feedback" hidden aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="checkin-success" id="checkin-success" hidden aria-live="polite">
+        <div class="checkin-success__mark" aria-hidden="true">
+          <svg class="checkin-success__icon" viewBox="0 0 52 52" focusable="false">
+            <circle class="checkin-success__circle" cx="26" cy="26" r="23" fill="none" />
+            <path class="checkin-success__check" fill="none" d="M14.5 26.5 22 34 37.5 17.5" />
+          </svg>
+        </div>
+        <h2 class="checkin-success__title">Presença confirmada</h2>
+        <p class="checkin-success__body">Seu check-in foi registrado. Aguarde nossas orientações de acesso ao evento.</p>
+        <p class="checkin-success__meta" id="checkin-success-meta"></p>
+        <div class="checkin-success__actions">
+          <a class="btn btn--outline" href="index.html">Voltar ao convite</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="container">
+    <a class="page-footer__link" href="index.html#investimento">Ainda não confirmou pagamento? Ver investimento</a>
+  </div>
+</footer>
+
+<script src="js/supabase-config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/check-in.js"></script>
+</body>
+</html>

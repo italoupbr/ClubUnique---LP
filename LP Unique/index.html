@@ -217,10 +217,13 @@
     </div>
   </section>
 
-  <!-- ============ PRÓXIMAS EDIÇÕES ============ -->
+  <!-- ============ EDIÇÕES ============ -->
   <section class="section editions" id="edicoes" aria-labelledby="editions-heading">
     <div class="container">
-      <h2 class="section-heading" id="editions-heading">Próximas edições</h2>
+      <header class="editions__header">
+        <h2 class="section-heading" id="editions-heading">Edições em destaque</h2>
+        <p class="editions__subtitle">Realizadas e por vir</p>
+      </header>
 
       <div class="editions__grid">
         <article class="edition-card edition-card--past" aria-label="Edição de julho, já realizada">
@@ -262,6 +265,30 @@
             <div class="edition-card__cta">
               <p class="edition-card__scarcity">Últimas vagas disponíveis</p>
               <a class="btn btn--primary edition-card__btn" href="#investimento">Confirmar presença</a>
+              <a class="btn btn--outline edition-card__btn edition-card__btn--secondary" href="check-in.html?edicao=2026-08-22">Fazer check-in</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="edition-card edition-card--upcoming" aria-label="Edição de setembro, em breve">
+          <div class="edition-card__media">
+            <img src="assets/venue/reserva-laguna-03.jpg" alt="Ambiente sofisticado preparado para experiência Club Unique" loading="lazy" />
+          </div>
+          <div class="edition-card__body">
+            <span class="edition-card__upcoming-label">Edição confirmada</span>
+            <span class="badge">Empresários, líderes e suas famílias</span>
+            <p class="edition-card__date">Sábado, 26 de setembro de 2026</p>
+            <p class="edition-card__place">Alphaville Nova Lima, Condomínio Reserva Laguna</p>
+            <p class="edition-card__access">Acesso exclusivo mediante convite</p>
+            <p class="edition-card__quote">"Mais um sábado para ampliar conexões, conteúdo e legado."</p>
+            <ul class="edition-card__highlights">
+              <li>Networking altamente qualificado</li>
+              <li>Conteúdos estratégicos de alto impacto</li>
+              <li>Experiência premium com gastronomia e ativações</li>
+            </ul>
+            <div class="edition-card__cta">
+              <p class="edition-card__scarcity">Inscrições em breve</p>
+              <a class="btn btn--outline edition-card__btn" href="check-in.html?edicao=2026-09-26">Lista de interesse</a>
             </div>
           </div>
         </article>
@@ -374,7 +401,7 @@
     <div class="container">
       <div class="conducao__layout">
         <figure class="conducao__media">
-          <img src="assets/daniel-saloma.jpg" alt="Daniel Salomão, condução da experiência Club Unique" loading="lazy" />
+          <img src="assets/fotoPreletor.jpeg" alt="Daniel Salomão, condução da experiência Club Unique" loading="lazy" />
         </figure>
         <div class="conducao__block">
           <div class="conducao__identity">
@@ -448,9 +475,14 @@
                 <span class="invest-panel__step-num" aria-hidden="true">03</span>
                 <span>Aguarde a confirmação da equipe em até 24 horas</span>
               </li>
+              <li>
+                <span class="invest-panel__step-num" aria-hidden="true">04</span>
+                <span>Complete o <a class="invest-panel__inline-link" href="check-in.html?edicao=2026-08-22">check-in de presença</a> para credenciamento no dia</span>
+              </li>
             </ol>
 
-            <p class="invest-panel__reassurance">Após o pagamento, entraremos em contato para validar seu convite e enviar orientações de acesso ao evento.</p>
+            <p class="invest-panel__reassurance">Após o pagamento, complete o check-in e aguarde nossa confirmação com orientações de acesso ao evento.</p>
+            <a class="btn btn--outline invest-panel__checkin" href="check-in.html?edicao=2026-08-22">Ir para check-in</a>
             <p class="invest-panel__support">Em caso de dúvidas sobre pagamento, fale com quem compartilhou este convite.</p>
             <p class="invest-panel__note">Vagas limitadas. Este convite é pessoal e intransferível.</p>
           </div>

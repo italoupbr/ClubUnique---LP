@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Unique | Experience Edition</title>
+<meta name="description" content="Club Unique Experience Edition. Sábado, 22 de agosto de 2026, Alphaville Nova Lima. Acesso exclusivo mediante convite.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+nav:not(:has(.container)):not(:has(.nav-inner)) {
+  padding-left: max(24px, calc(50% - 600px + 24px));
+  padding-right: max(24px, calc(50% - 600px + 24px));
+}
+footer:not(:has(.container)):not(:has(.footer-inner)) {
+  padding-left: max(24px, calc(50% - 600px + 24px));
+  padding-right: max(24px, calc(50% - 600px + 24px));
+}
+
+:root{
+  --color-primary:#11100F;
+  --color-primary-dark:#0C0B0A;
+  --color-secondary:#2A2724;
+  --color-accent:#BBA36D;
+  --color-text:#E8E2D6;
+  --color-text-muted:#A79F90;
+  --color-bg:#11100F;
+  --color-bg-subtle:#171512;
+  --color-border:#2A2724;
+  --font-heading:'Cormorant Garamond',serif;
+  --font-body:'Cormorant Garamond',serif;
+  --radius:0px;
+  --shadow-sm:none;
+  --shadow-md:none;
+  --heading-weight:400;
+  --heading-size:clamp(2.5rem,5.5vw,4rem);
+  --heading-tracking:0.01em;
+  --body-size:1.25rem;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:var(--font-body);
+  font-size:var(--body-size,1rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--color-accent);color:var(--color-primary);}
+h1,h2,h3{
+  font-family:var(--font-heading);
+  font-weight:var(--heading-weight,400);
+  letter-spacing:var(--heading-tracking,0.01em);
+  line-height:1.15;
+}
+a{color:inherit;text-decoration:none;}
+a:focus-visible,button:focus-visible{outline:1px solid var(--color-accent);outline-offset:4px;}
+img{max-width:100%;display:block;}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+.geo-answer{
+  font-size:1.125rem;
+  color:var(--color-text-muted);
+  max-width:52ch;
+  margin-bottom:32px;
+  line-height:1.6;
+}
+.geo-answer strong{color:var(--color-text);font-weight:400;}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:72px;display:flex;align-items:center;
+  background:linear-gradient(to bottom,rgba(17,16,15,0.85),rgba(17,16,15,0));
+}
+.nav-inner{
+  width:100%;max-width:1120px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:var(--font-heading);
+  font-size:1.375rem;font-weight:400;letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+.nav-logo em{font-style:normal;color:var(--color-accent);}
+.nav-cta{
+  font-size:0.9375rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--color-text);padding:12px 4px;position:relative;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.nav-cta::after{
+  content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;
+  background:var(--color-accent);transform-origin:left;transition:transform 400ms ease;
+}
+.nav-cta:hover::after{transform:scaleX(0.4);}
+.nav-cta:active{transform:translateY(1px);}
+
+.micro-label{
+  display:inline-block;
+  font-size:0.8125rem;letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--color-accent);font-weight:400;
+}
+
+.ghost-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:16px 8px 12px;min-height:48px;
+  font-family:var(--font-body);font-size:1.0625rem;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--color-text);position:relative;cursor:pointer;
+  background:transparent;border:none;
+}
+.ghost-cta::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;
+  background:var(--color-accent);transition:left 400ms ease,right 400ms ease;
+}
+.ghost-cta:hover{color:#fff;}
+.ghost-cta:hover::after{left:24%;right:24%;}
+.ghost-cta:active{transform:translateY(1px);}
+
+.hero{
+  position:relative;min-height:100dvh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url("https://viidsfngwjpuejsezzsj.supabase.co/storage/v1/object/public/site-studio-fotos-cliente/projetos/c30f02d9-8b3d-483b-9d5d-2d2bbc6ce626/2610fe79-9f95-4276-86ac-be85fb17eccd/1785949961939.png");
+  background-size:cover;background-position:center 35%;
+  transform:scale(1.05);
+  animation:heroZoom 2400ms ease-out forwards;
+}
+@keyframes heroZoom{to{transform:scale(1);}}
+.hero-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(17,16,15,0) 0%,rgba(17,16,15,0.18) 30%,rgba(17,16,15,0.55) 58%,rgba(17,16,15,0.88) 80%,var(--color-bg) 100%);
+}
+.hero-lockup{
+  position:absolute;top:38%;left:0;right:0;
+  display:flex;flex-direction:column;align-items:center;gap:24px;
+  padding:0 24px;text-align:center;
+}
+.hero-logo{
+  font-family:var(--font-heading);
+  font-size:clamp(1.5rem,3vw,2rem);font-weight:400;
+  letter-spacing:0.22em;text-transform:uppercase;
+}
+.hero-logo em{font-style:normal;color:var(--color-accent);}
+.hero-edition{
+  padding:10px 32px;border:1px solid var(--color-accent);
+  font-size:0.8125rem;letter-spacing:0.34em;text-transform:uppercase;color:var(--color-text);
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:1120px;margin:0 auto;width:100%;
+  padding:0 24px 64px;
+}
+.hero-content h1{
+  font-size:var(--heading-size,clamp(2.5rem,5.5vw,4rem));
+  max-width:14ch;margin-bottom:24px;
+}
+.hero-sub{
+  font-size:var(--body-size,1rem);
+  color:var(--color-text-muted);
+  max-width:52ch;margin-bottom:32px;
+}
+.hero-sub strong{font-weight:400;color:var(--color-text);}
+.hero-hairline{width:64px;height:1px;background:var(--color-accent);margin-bottom:32px;}
+.hero-pillars{
+  display:flex;flex-wrap:wrap;gap:8px 0;
+  margin-top:48px;padding-top:24px;
+  border-top:1px solid var(--color-border);list-style:none;
+}
+.hero-pillars li{
+  font-size:0.875rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--color-text-muted);display:flex;align-items:center;
+}
+.hero-pillars li:not(:last-child)::after{
+  content:"";width:24px;height:1px;background:var(--color-accent);
+  margin:0 16px;display:inline-block;opacity:0.7;
+}
+
+section{padding:160px 0;}
+@media (max-width:640px){section{padding:96px 0;}}
+.reveal{opacity:0;transform:translateY(12px);transition:opacity 700ms ease-out,transform 700ms ease-out;}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+.quando{background:var(--color-bg);text-align:center;}
+.quando .micro-label{margin-bottom:48px;}
+.quando-data{
+  font-family:var(--font-heading);
+  font-size:clamp(3.5rem,9vw,6.5rem);
+  font-weight:300;line-height:1;color:var(--color-text);
+  display:flex;align-items:baseline;justify-content:center;gap:24px;flex-wrap:wrap;
+}
+.quando-data .num{color:var(--color-accent);font-weight:300;letter-spacing:0.06em;}
+.quando-data .ano{font-size:clamp(1.5rem,3.5vw,2.5rem);color:var(--color-text-muted);}
+.quando-dia{margin-top:24px;font-size:1.25rem;color:var(--color-text-muted);letter-spacing:0.06em;}
+.quando-rule{width:1px;height:64px;background:var(--color-accent);margin:56px auto;opacity:0.85;}
+.quando-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:880px;margin:0 auto;}
+.quando-item .micro-label{display:block;margin-bottom:16px;color:var(--color-accent);}
+.quando-item p{font-size:1.25rem;line-height:1.5;}
+.quando-item p small{display:block;font-size:1rem;color:var(--color-text-muted);margin-top:8px;}
+.quando-rule-h{width:96px;height:1px;background:var(--color-accent);margin:64px auto 0;}
+@media (max-width:768px){
+  .quando-grid{grid-template-columns:1fr;gap:40px;}
+  .quando-item{padding:0 16px;}
+  .quando-item + .quando-item{border-top:1px solid var(--color-border);padding-top:40px;}
+}
+
+.proposito{background:var(--color-bg-subtle);}
+.proposito-inner{max-width:680px;margin:0 auto;text-align:left;}
+.proposito h2{font-size:clamp(1.875rem,4vw,2.25rem);margin-bottom:64px;font-weight:400;line-height:1.3;}
+.proposito p{font-size:var(--body-size,1rem);margin-bottom:32px;max-width:62ch;}
+.proposito p:last-of-type{margin-bottom:0;}
+.proposito .lead{font-size:1.5rem;font-style:italic;color:var(--color-text);}
+.proposito-rule{width:64px;height:1px;background:var(--color-accent);margin-bottom:48px;}
+
+.encontrara .micro-label{margin-bottom:64px;display:block;}
+.encontrara h2{font-size:clamp(1.875rem,4vw,2.25rem);margin-bottom:64px;max-width:20ch;}
+.encontrara-list{
+  list-style:none;display:grid;grid-template-columns:1fr 1fr;
+  column-gap:80px;row-gap:0;
+}
+.encontrara-list li{
+  padding:32px 0;border-top:1px solid var(--color-border);
+  display:flex;align-items:baseline;gap:24px;font-size:1.25rem;line-height:1.5;
+}
+.encontrara-list li::before{
+  content:"";flex:none;width:24px;height:1px;
+  background:var(--color-accent);transform:translateY(-6px);
+}
+@media (max-width:768px){.encontrara-list{grid-template-columns:1fr;}}
+
+.porque{background:var(--color-bg-subtle);}
+.porque .micro-label{display:block;margin-bottom:64px;text-align:center;}
+.porque h2{text-align:center;font-size:clamp(1.875rem,4vw,2.25rem);margin-bottom:96px;}
+.porque-cols{display:grid;grid-template-columns:1fr 1px 1fr;gap:64px;max-width:960px;margin:0 auto;}
+.porque-divider{background:var(--color-accent);opacity:0.6;width:1px;}
+.porque-col h3{
+  font-size:0.875rem;letter-spacing:0.28em;text-transform:uppercase;
+  font-weight:400;color:var(--color-accent);margin-bottom:48px;
+}
+.porque-col ul{list-style:none;}
+.porque-col li{padding:20px 0;font-size:1.25rem;line-height:1.5;border-top:1px solid var(--color-border);}
+.porque-col li:first-child{border-top:none;padding-top:0;}
+@media (max-width:768px){
+  .porque-cols{grid-template-columns:1fr;gap:0;}
+  .porque-divider{width:96px;height:1px;margin:56px auto;}
+}
+
+.prova-social{background:var(--color-bg);}
+.prova-social h2{font-size:clamp(1.875rem,4vw,2.25rem);margin-bottom:48px;max-width:18ch;}
+.prova-social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 64px;}
+.prova-social-item{padding:32px 0;border-top:1px solid var(--color-border);}
+.prova-social-item .micro-label{display:block;margin-bottom:12px;}
+.prova-social-item p{font-size:1.125rem;line-height:1.55;color:var(--color-text-muted);}
+.prova-social-item p strong{color:var(--color-text);font-weight:400;}
+@media (max-width:768px){.prova-social-grid{grid-template-columns:1fr;}}
+
+.legado{
+  position:relative;min-height:100dvh;display:flex;align-items:flex-end;padding:0;overflow:hidden;
+}
+.legado-bg{
+  position:absolute;inset:0;
+  background-image:url("https://viidsfngwjpuejsezzsj.supabase.co/storage/v1/object/public/site-studio-fotos-cliente/projetos/c30f02d9-8b3d-483b-9d5d-2d2bbc6ce626/2610fe79-9f95-4276-86ac-be85fb17eccd/1785949961939.png");
+  background-size:cover;background-position:center 70%;
+  filter:brightness(0.55) saturate(0.7);
+}
+.legado-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,var(--color-bg) 0%,rgba(17,16,15,0.55) 35%,rgba(17,16,15,0.82) 70%,var(--color-bg) 100%);
+}
+.legado-content{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding:160px 24px;}
+.legado h2{font-size:var(--heading-size,clamp(2.5rem,5.5vw,4rem));max-width:18ch;margin-bottom:32px;}
+.legado-hairline{width:64px;height:1px;background:var(--color-accent);margin-bottom:32px;}
+.legado-tag{font-size:var(--body-size,1rem);font-style:italic;color:var(--color-text-muted);max-width:48ch;margin-bottom:56px;}
+.legado-pillars{display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-bottom:64px;list-style:none;}
+.legado-pillars li{
+  font-family:var(--font-heading);font-size:1.375rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--color-text);display:flex;align-items:center;
+}
+.legado-pillars li:not(:last-child)::after{content:"";width:32px;height:1px;background:var(--color-accent);margin:0 24px;}
+.legado .ghost-cta{border:1px solid var(--color-accent);padding:20px 48px;}
+.legado .ghost-cta::after{display:none;}
+.legado .ghost-cta:hover{background:var(--color-accent);color:var(--color-primary);}
+.legado-note{margin-top:24px;font-size:1rem;color:var(--color-text-muted);letter-spacing:0.06em;}
+
+footer{border-top:1px solid var(--color-border);padding:64px 0;background:var(--color-bg);}
+.footer-inner{
+  max-width:1120px;margin:0 auto;padding:0 24px;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.footer-logo{font-family:var(--font-heading);font-size:1.125rem;letter-spacing:0.16em;text-transform:uppercase;}
+.footer-logo em{font-style:normal;color:var(--color-accent);}
+.footer-note{font-size:1rem;color:var(--color-text-muted);letter-spacing:0.06em;}
+
+.whatsapp-float{
+  position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;background:#25D366;
+  display:flex;align-items:center;justify-content:center;transition:transform 300ms ease;
+}
+.whatsapp-float:hover{transform:translateY(-2px);}
+.whatsapp-float svg{width:30px;height:30px;fill:#fff;}
+
+@media (max-width:640px){
+  body{font-size:1.125rem;}
+  .hero-content{padding-bottom:48px;}
+  .hero-pillars li{font-size:0.75rem;}
+  .hero-pillars li:not(:last-child)::after{width:12px;margin:0 10px;}
+  .legado-pillars li{font-size:1.125rem;}
+  .legado-pillars li:not(:last-child)::after{width:16px;margin:0 12px;}
+  .footer-inner{flex-direction:column;align-items:flex-start;}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;}
+  .hero-bg{transform:none;}
+  .reveal{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Club Unique",
+      "description": "Club Unique Experience Edition, evento empresarial exclusivo em Alphaville Nova Lima."
+    },
+    {
+      "@type": "Event",
+      "name": "Club Unique Experience Edition",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Condomínio Reserva Laguna",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Alphaville Nova Lima",
+          "addressRegion": "MG",
+          "addressCountry": "BR"
+        }
+      },
+      "startDate": "2026-08-22"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-current="page">Club <em>Unique</em></a>
+    <a class="nav-cta" href="#investimento">Solicitar convite</a>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="hero-bg" role="img" aria-label="Residência iluminada ao entardecer, com piscina e jardins em tons escuros"></div>
+  <div class="hero-veil"></div>
+
+  <div class="hero-lockup">
+    <span class="hero-logo">Club <em>Unique</em></span>
+    <span class="hero-edition">Experience Edition</span>
+  </div>
+
+  <div class="hero-content">
+    <p class="geo-answer" id="geo-answer">
+      O <strong>Club Unique</strong> Experience Edition é um <strong>evento empresarial exclusivo</strong> em <strong>Alphaville Nova Lima</strong>, no Condomínio Reserva Laguna, para empresários, líderes e suas famílias.
+    </p>
+    <h1>Conexões que transformam.</h1>
+    <div class="hero-hairline"></div>
+    <p class="hero-sub">Experiências que ficam. Negócios que crescem. <strong>Sábado, 22 de agosto de 2026</strong>, Alphaville Nova Lima. Acesso exclusivo mediante convite.</p>
+    <a class="ghost-cta" href="#investimento">Solicitar convite</a>
+
+    <ul class="hero-pillars" aria-label="Pilares do encontro">
+      <li>Networking de alto nível</li>
+      <li>Experiências exclusivas</li>
+      <li>Crescimento estratégico</li>
+      <li>Ambientes sofisticados</li>
+      <li>Acesso inteligente</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="quando" id="quando">
+  <div class="container">
+    <span class="micro-label">O encontro</span>
+    <div class="quando-data">
+      <span class="num">22</span>
+      <span>agosto</span>
+      <span class="ano">2026</span>
+    </div>
+    <p class="quando-dia">Sábado</p>
+    <div class="quando-rule" aria-hidden="true"></div>
+    <div class="quando-grid">
+      <div class="quando-item">
+        <span class="micro-label">Data</span>
+        <p>Sábado, 22 de agosto<small>Reserve o dia inteiro</small></p>
+      </div>
+      <div class="quando-item">
+        <span class="micro-label">Local</span>
+        <p>Alphaville Nova Lima<small>Condomínio Reserva Laguna</small></p>
+      </div>
+      <div class="quando-item">
+        <span class="micro-label">Acesso</span>
+        <p>Exclusivo<small>Mediante convite</small></p>
+      </div>
+    </div>
+    <div class="quando-rule-h" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="proposito" id="proposito">
+  <div class="container">
+    <div class="proposito-inner reveal">
+      <div class="proposito-rule" aria-hidden="true"></div>
+      <h2>Uma experiência exclusiva para empresários, líderes e suas famílias</h2>
+      <p class="lead">Negócios crescem quando relacionamentos se fortalecem.</p>
+      <p>O Club Unique Experience Edition foi criado para empresários que compreendem que o verdadeiro crescimento não acontece apenas dentro da empresa, mas também através das conexões, experiências e relacionamentos que sustentam uma trajetória de sucesso.</p>
+      <p>Nesta edição especial de sábado, além de uma programação estratégica voltada ao crescimento empresarial, você poderá compartilhar essa experiência ao lado da sua esposa, transformando um encontro de negócios em um momento memorável para toda a família.</p>
+    </div>
+  </div>
+</section>
+
+<section class="encontrara" id="experiencia">
+  <div class="container">
+    <span class="micro-label">O que espera por você</span>
+    <h2>Aqui você encontrará</h2>
+    <ul class="encontrara-list">
+      <li>Networking altamente qualificado com empresários e líderes da região</li>
+      <li>Conteúdos estratégicos sobre crescimento, posicionamento, gestão e expansão empresarial</li>
+      <li>Ambiente sofisticado e cuidadosamente preparado</li>
+      <li>Gastronomia premium e experiências exclusivas</li>
+      <li>Ativações especiais e experiências sensoriais</li>
+      <li>Momentos de integração para empresários e seus acompanhantes</li>
+      <li>Relacionamentos que fortalecem tanto os negócios quanto a vida pessoal</li>
+    </ul>
+  </div>
+</section>
+
+<section class="porque" id="porque">
+  <div class="container">
+    <span class="micro-label">Por que participar</span>
+    <h2>Um dia, duas boas razões</h2>
+    <div class="porque-cols">
+      <div class="porque-col">
+        <h3>Para os negócios</h3>
+        <ul>
+          <li>Conexões estratégicas de alto valor</li>
+          <li>Conteúdo aplicável ao crescimento empresarial</li>
+          <li>Networking direcionado</li>
+          <li>Oportunidades reais de parcerias e negócios</li>
+          <li>Acesso a empresários altamente qualificados</li>
+        </ul>
+      </div>
+      <div class="porque-divider" aria-hidden="true"></div>
+      <div class="porque-col">
+        <h3>Para a família</h3>
+        <ul>
+          <li>Ambiente acolhedor e sofisticado</li>
+          <li>Gastronomia premium</li>
+          <li>Experiências compartilhadas</li>
+          <li>Ativações especiais para integração</li>
+          <li>Um sábado diferente, cercado por pessoas que valorizam crescimento, prosperidade e qualidade de vida</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prova_social" class="prova-social">
+  <div class="container">
+    <span class="micro-label">Quem participa</span>
+    <h2>Prova social</h2>
+    <div class="prova-social-grid">
+      <div class="prova-social-item">
+        <span class="micro-label">Edição anterior</span>
+        <p><strong>Julho de 2026</strong> realizada nos arredores de Alphaville e Nova Lima, com público selecionado de empresários de alto nível.</p>
+      </div>
+      <div class="prova-social-item">
+        <span class="micro-label">Próximo encontro</span>
+        <p><strong>22 de agosto de 2026</strong> no Condomínio Reserva Laguna, Alphaville Nova Lima.</p>
+      </div>
+      <div class="prova-social-item">
+        <span class="micro-label">Público</span>
+        <p>Empresários, líderes e suas famílias, com acesso exclusivo mediante convite pessoal.</p>
+      </div>
+      <div class="prova-social-item">
+        <span class="micro-label">Condução</span>
+        <p>Experiência conduzida por <strong>Daniel Salomão</strong>, ao lado de parceiros especialistas convidados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legado" id="investimento">
+  <div class="legado-bg" role="img" aria-label="Jardins e piscina da residência ao anoitecer, em tons escuros"></div>
+  <div class="legado-veil"></div>
+  <div class="legado-content reveal">
+    <h2>Um sábado para fortalecer negócios, relacionamentos e legado</h2>
+    <div class="legado-hairline" aria-hidden="true"></div>
+    <p class="legado-tag">Conexões que transformam. Experiências que ficam. Negócios que crescem. Famílias que evoluem juntas.</p>
+    <ul class="legado-pillars" aria-label="Pilares de fechamento">
+      <li>Conexões</li>
+      <li>Experiências</li>
+      <li>Negócios</li>
+      <li>Famílias</li>
+    </ul>
+    <a class="ghost-cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20solicitar%20meu%20convite%20para%20o%20Club%20Unique%20Experience%20Edition.">Confirmar presença</a>
+    <p class="legado-note">Acesso exclusivo mediante convite. Vagas limitadas por natureza do encontro.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Club <em>Unique</em></span>
+    <span class="footer-note">Experience Edition, 22 de agosto de 2026, Alphaville Nova Lima</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Club%20Unique%20Experience%20Edition." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6 1.5h.3c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.5 1.2 1.2-4.4-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7 0-5.8 4.7-10.5 10.5-10.5S27 9.2 27 15s-5.2 9.8-11 9.8zm5.8-7.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.4c.2.2 2.3 3.5 5.5 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('is-visible');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.15});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+
+</body>
+</html>

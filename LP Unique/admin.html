@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.replace("no-js", "js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Admin · Check-ins Club Unique</title>
+<meta name="description" content="Painel administrativo de check-ins do Club Unique Experience Edition." />
+<meta name="robots" content="noindex, nofollow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Public+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-shell">
+
+<a class="skip-link" href="#admin-heading">Pular para o painel</a>
+
+<header class="page-header">
+  <div class="container page-header__inner">
+    <div class="page-header__brand">
+      <p class="page-header__subtitle">Club Unique · Experience Edition</p>
+      <h1 class="page-header__title" id="admin-heading">Painel de check-ins</h1>
+    </div>
+    <a class="btn btn--outline" href="index.html">Voltar ao site</a>
+  </div>
+</header>
+
+<main class="page-main">
+  <div class="container">
+    <section class="admin-panel admin-dashboard" id="admin-dashboard">
+      <div class="admin-toolbar">
+        <p class="admin-stats" id="admin-stats">Carregando…</p>
+
+        <div class="admin-toolbar__actions">
+          <div class="form-field admin-filter-field">
+            <label for="admin-edition-filter">Edição</label>
+            <select id="admin-edition-filter" class="admin-select">
+              <option value="all">Todas as edições</option>
+              <option value="2026-08-22">22 de agosto de 2026</option>
+              <option value="2026-09-26">26 de setembro de 2026</option>
+            </select>
+          </div>
+          <div class="admin-toolbar__buttons">
+            <button class="btn btn--outline" type="button" id="admin-refresh">Atualizar</button>
+            <button class="btn btn--outline" type="button" id="admin-export">Exportar CSV</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Empresa</th>
+              <th scope="col">Edição</th>
+              <th scope="col">Confirmado em</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <tr>
+              <td colspan="6" class="admin-empty">Carregando registros…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="js/supabase-config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
