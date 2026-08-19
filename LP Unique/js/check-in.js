@@ -31,6 +31,8 @@
   const submitBtn = document.getElementById("checkin-submit");
   const phoneInput = document.getElementById("phone");
   const emailInput = document.getElementById("email");
+  const termsInput = document.getElementById("terms_accepted");
+  const termsFieldset = document.getElementById("checkin-terms");
 
   const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -55,6 +57,11 @@
     });
   }
 
+  if (termsInput) {
+    termsInput.addEventListener("change", syncSubmitState);
+    syncSubmitState();
+  }
+
   if (!form) return;
 
   form.addEventListener("submit", async (event) => {
@@ -72,6 +79,7 @@
       email: sanitizeEmail(String(formData.get("email") || ""), true),
       company: String(formData.get("company") || "").trim(),
       edition: String(formData.get("edition") || editionKey),
+      terms_accepted_at: new Date().toISOString(),
     };
 
     if (!payload.full_name || !payload.company) {
@@ -90,6 +98,15 @@
       emailInput?.focus();
       return;
     }
+
+    if (!termsInput?.checked) {
+      showFeedback("error", "Aceite o termo de autorização para confirmar sua presença.");
+      termsFieldset?.classList.add("is-invalid");
+      termsInput?.focus();
+      return;
+    }
+
+    termsFieldset?.classList.remove("is-invalid");
 
     setLoading(true);
     showFeedback("", "");
@@ -123,9 +140,19 @@
 
   function setLoading(isLoading) {
     if (!submitBtn) return;
-    submitBtn.disabled = isLoading;
     submitBtn.classList.toggle("is-loading", isLoading);
     submitBtn.setAttribute("aria-busy", isLoading ? "true" : "false");
+    syncSubmitState(isLoading);
+  }
+
+  function syncSubmitState(forceDisabled) {
+    if (!submitBtn || !termsInput) return;
+    const blocked = forceDisabled === true || !termsInput.checked;
+    submitBtn.disabled = blocked;
+    submitBtn.setAttribute("aria-disabled", blocked ? "true" : "false");
+    if (termsInput.checked) {
+      termsFieldset?.classList.remove("is-invalid");
+    }
   }
 
   function showFeedback(state, message) {

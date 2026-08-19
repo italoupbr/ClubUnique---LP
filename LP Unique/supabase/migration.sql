@@ -17,6 +17,9 @@ create index if not exists presence_confirmations_edition_idx
 create index if not exists presence_confirmations_created_at_idx
   on public.presence_confirmations (created_at desc);
 
+alter table public.presence_confirmations
+  add column if not exists terms_accepted_at timestamptz;
+
 alter table public.presence_confirmations enable row level security;
 
 drop policy if exists "Allow anonymous insert" on public.presence_confirmations;

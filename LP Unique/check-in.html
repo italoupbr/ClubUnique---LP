@@ -64,8 +64,25 @@
             <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Nome da empresa" />
           </div>
 
+          <fieldset class="form-terms" id="checkin-terms">
+            <legend class="form-terms__legend">Autorização de uso de imagem e dados</legend>
+
+            <div class="form-terms__document" tabindex="0" aria-label="Texto do termo de autorização">
+              <p>Fica ainda autorizada, de livre e espontânea vontade, para os mesmos fins, a cessão de direitos da veiculação, inclusive para parceiros e patrocinadores das imagens e informações obtidas pelo evento e no evento e dados do formulário, não recebendo para tanto qualquer tipo de remuneração.</p>
+              <p>Por esta ser a expressão da minha vontade declaro que autorizo o uso acima descrito sem que nada haja a ser reclamado a título de direitos conexos à minha imagem ou a qualquer outra informação disponibilizada no formulário.</p>
+            </div>
+
+            <label class="form-terms__accept" for="terms_accepted">
+              <input id="terms_accepted" name="terms_accepted" type="checkbox" required value="accepted" />
+              <span class="form-terms__box" aria-hidden="true">
+                <svg class="form-terms__tick" viewBox="0 0 12 10" focusable="false"><path d="M1 5.2 4.2 8.4 11 1.4" fill="none" /></svg>
+              </span>
+              <span class="form-terms__label">Li e aceito o termo acima para confirmar minha presença.</span>
+            </label>
+          </fieldset>
+
           <div class="form-actions">
-            <button class="btn btn--primary checkin-submit" type="submit" id="checkin-submit">
+            <button class="btn btn--primary checkin-submit" type="submit" id="checkin-submit" disabled aria-disabled="true">
               <span class="checkin-submit__label">Confirmar presença</span>
               <span class="checkin-submit__loading" aria-hidden="true">Confirmando…</span>
             </button>
