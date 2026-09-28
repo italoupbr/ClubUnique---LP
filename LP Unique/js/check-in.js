@@ -12,11 +12,18 @@
       date: "Sábado, 26 de setembro de 2026",
       place: "Reserva Laguna · Alphaville Nova Lima",
     },
+    "2026-10-18": {
+      label: "Experience Edition · Outubro",
+      date: "Domingo, 18 de outubro de 2026",
+      place: "Reserva Laguna · Alphaville Nova Lima",
+    },
   };
 
+  const DEFAULT_EDITION = "2026-10-18";
+
   const params = new URLSearchParams(window.location.search);
-  const editionKey = params.get("edicao") || "2026-08-22";
-  const edition = editions[editionKey] || editions["2026-08-22"];
+  const editionKey = params.get("edicao") || DEFAULT_EDITION;
+  const edition = editions[editionKey] || editions[DEFAULT_EDITION];
 
   const editionLabel = document.getElementById("checkin-edition-label");
   const editionDate = document.getElementById("checkin-edition-date");
@@ -39,7 +46,7 @@
   if (editionLabel) editionLabel.textContent = edition.label;
   if (editionDate) editionDate.textContent = edition.date;
   if (editionPlace) editionPlace.textContent = edition.place;
-  if (editionInput) editionInput.value = editionKey in editions ? editionKey : "2026-08-22";
+  if (editionInput) editionInput.value = editionKey in editions ? editionKey : DEFAULT_EDITION;
 
   if (phoneInput) {
     phoneInput.addEventListener("input", () => {

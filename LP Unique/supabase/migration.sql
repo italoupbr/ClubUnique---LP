@@ -7,7 +7,7 @@ create table if not exists public.presence_confirmations (
   phone text not null,
   email text not null,
   company text not null,
-  edition text not null default '2026-08-22',
+  edition text not null default '2026-10-18',
   created_at timestamptz not null default now()
 );
 
@@ -19,6 +19,9 @@ create index if not exists presence_confirmations_created_at_idx
 
 alter table public.presence_confirmations
   add column if not exists terms_accepted_at timestamptz;
+
+alter table public.presence_confirmations
+  alter column edition set default '2026-10-18';
 
 alter table public.presence_confirmations enable row level security;
 
