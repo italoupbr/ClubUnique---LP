@@ -68,7 +68,7 @@
   function formatEdition(value) {
     if (value === "2026-08-22") return "22 ago 2026";
     if (value === "2026-09-26") return "26 set 2026";
-    if (value === "2026-10-18") return "18 out 2026";
+    if (value === "2026-10-24") return "24 out 2026";
     return value || "—";
   }
 

@@ -7,14 +7,14 @@
       date: "Sábado, 22 de agosto de 2026",
       place: "Reserva Laguna · Alphaville Nova Lima",
     },
-    "2026-10-18": {
+    "2026-10-24": {
       label: "Experience Edition · Outubro",
-      date: "Domingo, 18 de outubro de 2026",
+      date: "Sábado, 24 de outubro de 2026",
       place: "Reserva Laguna · Alphaville Nova Lima",
     },
   };
 
-  const DEFAULT_EDITION = "2026-10-18";
+  const DEFAULT_EDITION = "2026-10-24";
 
   const params = new URLSearchParams(window.location.search);
   const editionKey = params.get("edicao") || DEFAULT_EDITION;
