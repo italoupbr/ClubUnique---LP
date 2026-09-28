@@ -7,11 +7,6 @@
       date: "Sábado, 22 de agosto de 2026",
       place: "Reserva Laguna · Alphaville Nova Lima",
     },
-    "2026-09-26": {
-      label: "Experience Edition · Setembro",
-      date: "Sábado, 26 de setembro de 2026",
-      place: "Reserva Laguna · Alphaville Nova Lima",
-    },
     "2026-10-18": {
       label: "Experience Edition · Outubro",
       date: "Domingo, 18 de outubro de 2026",
