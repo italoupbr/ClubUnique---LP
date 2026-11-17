@@ -5,20 +5,69 @@
 <script>document.documentElement.classList.replace("no-js", "js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<title>Club Unique · Experience Edition</title>
-<meta name="description" content="Club Unique Experience Edition: conexões que transformam, experiências que ficam, negócios que crescem. Convite pessoal e intransferível." />
-<meta property="og:title" content="Club Unique · Experience Edition" />
-<meta property="og:description" content="Conexões que transformam. Experiências que ficam. Negócios que crescem. Experience Edition, Reserva Laguna, 24 de outubro de 2026." />
+<title>Advisor Elite Club · Experience Edition · Belo Horizonte</title>
+<meta name="description" content="Advisor Elite Club Experience Edition: evento empresarial exclusivo em Belo Horizonte, sábado, 12 de dezembro de 2026. Networking estratégico, cinco especialistas em gestão, Drunch Experiência e happy hour." />
+<meta property="og:title" content="Advisor Elite Club · Experience Edition" />
+<meta property="og:description" content="Conexões de alto valor. Oportunidades reais. Sábado, 12 de dezembro de 2026, em Belo Horizonte." />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:image" content="assets/venue/reserva-laguna-01.jpg" />
+<meta property="og:url" content="https://club-unique-lp.vercel.app/" />
+<meta property="og:image" content="https://club-unique-lp.vercel.app/assets/og-advisor-elite-club.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#0E0C09" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Public+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
 
+<link rel="preload" as="image" href="assets/hero-key-visual.webp" />
 <link rel="stylesheet" href="css/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BusinessEvent",
+  "name": "Advisor Elite Club · Experience Edition",
+  "description": "Evento empresarial exclusivo em Belo Horizonte que reúne empresários, decisores, investidores e grandes players do mercado para networking estratégico, conteúdo de gestão e experiências premium.",
+  "startDate": "2026-12-12T13:30:00-03:00",
+  "endDate": "2026-12-12T20:30:00-03:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Belo Horizonte (endereço enviado aos participantes confirmados)",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    }
+  },
+  "image": ["https://club-unique-lp.vercel.app/assets/og-advisor-elite-club.jpg"],
+  "organizer": {
+    "@type": "Organization",
+    "name": "Advisor Elite Club",
+    "url": "https://club-unique-lp.vercel.app/"
+  },
+  "performer": [
+    { "@type": "Person", "name": "Daniel Salomão" },
+    { "@type": "Person", "name": "João Oka" },
+    { "@type": "Person", "name": "Jacque Gomes" },
+    { "@type": "Person", "name": "Kelly Maia" },
+    { "@type": "Person", "name": "Gabriel Diniz" },
+    { "@type": "Person", "name": "Herbran Hermidas" }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "690.00",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://club-unique-lp.vercel.app/#investimento"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -27,50 +76,51 @@
 <!-- ============ HERO ============ -->
 <header class="hero" id="hero">
   <div class="hero__bg" aria-hidden="true">
-    <img class="hero__photo" src="assets/hero-property.jpg" alt="" role="presentation" />
+    <img class="hero__photo" src="assets/hero-key-visual.webp" alt="" role="presentation" fetchpriority="high" />
     <div class="hero__scrim"></div>
   </div>
 
   <div class="hero__frame" aria-hidden="true"></div>
 
+  <img class="hero__host" src="assets/daniel-salomao-cutout.webp" alt="" role="presentation" width="900" height="857" />
+
   <div class="hero__content">
     <div class="reveal-stagger">
-      <p class="lockup" data-reveal>
-        <span class="lockup__brand">Club Unique</span>
-        <span class="lockup__divider" aria-hidden="true"></span>
-        <span class="lockup__seal">Experience Edition</span>
+      <p class="hero__brand" data-reveal>
+        <img class="hero__logo" src="assets/advisor-elite-club-logo.webp" alt="Advisor Elite Club · Experience Edition" width="720" height="321" />
+      </p>
+
+      <p class="geo-answer" id="geo-answer" data-reveal>
+        O <strong>Advisor Elite Club</strong> Experience Edition é um <strong>evento empresarial exclusivo</strong> em <strong>Belo Horizonte</strong> que reúne empresários, decisores, investidores e grandes players do mercado.
       </p>
 
       <h1 class="hero__title" id="hero-heading" data-reveal>
-        Conexões que transformam.<br />Experiências que ficam.
+        Conexões de alto valor.<br />Oportunidades reais.
       </h1>
 
-      <p class="hero__subtitle" data-reveal>Negócios que crescem.</p>
+      <p class="hero__subtitle" data-reveal>Sábado, 12 de dezembro de 2026 · 13h30 às 20h30</p>
 
       <div class="hero__cta-row" data-reveal>
-        <a class="btn btn--primary" href="#investimento">Confirmar presença</a>
+        <a class="btn btn--primary" href="#investimento">Garantir minha vaga</a>
+        <a class="hero__link" href="#programacao">Ver programação</a>
       </div>
 
-      <ul class="value-strip" data-reveal aria-label="Pilares da experiência">
+      <ul class="value-strip" data-reveal aria-label="Destaques da edição">
         <li>
           <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><circle cx="16" cy="10" r="4"/><path d="M8 26c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-          <span>Networking de Alto Nível</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><path d="M16 4l4.5 9.2L30 14.6l-7 6.8L24.7 30 16 25.2 7.3 30 9 21.4l-7-6.8 9.5-1.4z"/></svg>
-          <span>Experiências Exclusivas</span>
+          <span>Networking estratégico</span>
         </li>
         <li>
           <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><path d="M4 26h24M8 26V16l5-4 5 6 6-10 4 4v14"/></svg>
-          <span>Crescimento Estratégico</span>
+          <span>5 especialistas em gestão</span>
         </li>
         <li>
-          <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><path d="M16 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>
-          <span>Ambientes Sofisticados</span>
+          <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><path d="M9 4v9a4 4 0 0 0 4 4v11M9 4v6M12 4v6M6 4v6M23 4v20M23 4c-3 1.5-4 4.5-4 8s1 6 4 6"/></svg>
+          <span>Drunch Experiência</span>
         </li>
         <li>
-          <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><rect x="10" y="14" width="12" height="10" rx="1"/><path d="M13 14v-3a3 3 0 0 1 6 0v3"/></svg>
-          <span>Acesso Inteligente</span>
+          <svg viewBox="0 0 32 32" class="icon" aria-hidden="true"><path d="M8 6h16l-2 9a6 6 0 0 1-12 0zM16 21v6M11 27h10"/></svg>
+          <span>Happy hour com networking</span>
         </li>
       </ul>
     </div>
@@ -81,147 +131,300 @@
 
 <main>
 
-  <!-- ============ O QUE É O CLUB UNIQUE ============ -->
-  <section class="section manifesto" aria-labelledby="manifesto-heading">
+  <!-- ============ BOAS-VINDAS ============ -->
+  <section class="section manifesto" id="proposito" aria-labelledby="manifesto-heading">
     <div class="container">
       <div class="manifesto__layout">
         <div class="manifesto__col">
-          <p class="manifesto__eyebrow">Uma experiência exclusiva para empresários, líderes e suas famílias</p>
-          <h2 class="section-heading" id="manifesto-heading">Negócios crescem quando relacionamentos se fortalecem.</h2>
+          <p class="manifesto__eyebrow">Bem-vindo(a) a uma experiência exclusiva</p>
+          <h2 class="section-heading" id="manifesto-heading">Este não é apenas um evento empresarial.</h2>
           <p class="manifesto__body">
-            O Club Unique Experience Edition foi criado para empresários que compreendem que o verdadeiro
-            crescimento não acontece apenas dentro da empresa, mas também através das conexões,
-            experiências e relacionamentos que sustentam uma trajetória de sucesso.
+            O Advisor Elite Club é uma experiência cuidadosamente planejada para proporcionar conexões
+            estratégicas, desenvolvimento e expansão de negócios, relacionamentos de alto valor e
+            oportunidades reais de crescimento.
           </p>
-          <p class="manifesto__body manifesto__body--family">
-            Nesta edição especial de sábado, além de uma programação estratégica voltada ao crescimento
-            empresarial, você poderá compartilhar essa experiência ao lado da sua esposa, transformando um
-            encontro de negócios em um momento memorável para toda a família.
+          <p class="manifesto__body manifesto__body--muted">
+            Em um local premium de Belo Horizonte, você estará ao lado de empresários, decisores,
+            investidores e grandes players do mercado, com conteúdo de gestão, rodadas de networking
+            nas mesas e momentos de gastronomia e música pensados para aproximar pessoas.
           </p>
-          <p class="manifesto__mantra"><span class="manifesto__mark" aria-hidden="true">&#8220;</span>Acesso gera oportunidade. Relacionamentos geram negócios. Ambientes certos aceleram crescimento.</p>
+          <p class="manifesto__mantra"><span class="manifesto__mark" aria-hidden="true">&#8220;</span>Invista seu bem mais precioso, o tempo, na busca de conhecimento e relacionamentos de qualidade.</p>
         </div>
         <figure class="manifesto__media">
-          <img src="assets/manifesto-relacionamentos.jpg" alt="Público em evento Club Unique, mãos erguidas em conexão coletiva" loading="lazy" />
+          <img src="assets/evento/plateia-mesas.webp" alt="Empresários reunidos nas mesas de networking de uma edição do Advisor Elite Club" width="792" height="990" loading="lazy" />
         </figure>
       </div>
     </div>
   </section>
 
   <!-- ============ O QUE VOCÊ VIVE ============ -->
-  <section class="section proofs" aria-labelledby="proofs-heading">
+  <section class="section proofs" id="experiencia" aria-labelledby="proofs-heading">
     <div class="container">
       <h2 class="section-heading" id="proofs-heading">Aqui você encontrará</h2>
-      <p class="proofs__lead">Três momentos concretos, não promessas genéricas.</p>
+      <p class="proofs__lead">Três frentes desenhadas para gerar negócios, não só inspiração.</p>
 
       <ul class="proofs__grid">
         <li class="proof-card">
           <figure class="proof-card__media">
-            <img src="assets/venue/reserva-laguna-02.jpg" alt="Empresários em networking premium no evento" loading="lazy" />
+            <img src="assets/evento/networking-mesas.webp" alt="Empresários conversando nas mesas durante rodada de networking" width="792" height="594" loading="lazy" />
           </figure>
           <div class="proof-card__body">
-            <h3 class="proof-card__title">Networking altamente qualificado</h3>
-            <p>Conexões estratégicas com empresários e líderes da região, com networking direcionado e oportunidades reais de parcerias e negócios.</p>
+            <h3 class="proof-card__title">Networking estratégico</h3>
+            <p>Rodadas de networking nas mesas, nos intervalos entre as palestras, com dinâmicas de conexão apresentadas na abertura para você sair com contatos certos.</p>
           </div>
         </li>
         <li class="proof-card">
           <figure class="proof-card__media">
-            <img src="assets/venue/reserva-laguna-03.jpg" alt="Ambiente sofisticado preparado para jornada estratégica" loading="lazy" />
+            <img src="assets/evento/palco-plateia.webp" alt="Plateia nas mesas diante do palco, com o telão do Advisor Elite Club" width="792" height="594" loading="lazy" />
           </figure>
           <div class="proof-card__body">
-            <h3 class="proof-card__title">Conteúdos estratégicos</h3>
-            <p>Crescimento, posicionamento, gestão e expansão empresarial, com conteúdo aplicável e impacto direto nos negócios.</p>
+            <h3 class="proof-card__title">Conteúdo estratégico de gestão</h3>
+            <p>Cinco especialistas falam de capital, posicionamento, gestão de riscos, vendas na era da IA e marketing que gera resultado.</p>
           </div>
         </li>
         <li class="proof-card">
           <figure class="proof-card__media">
-            <img src="assets/venue/reserva-laguna-04.jpg" alt="Energia coletiva durante experiência no evento" loading="lazy" />
+            <img src="assets/evento/musica-ao-vivo.webp" alt="Apresentação musical ao vivo com flauta e guitarra" width="792" height="594" loading="lazy" />
           </figure>
           <div class="proof-card__body">
-            <h3 class="proof-card__title">Experiência premium</h3>
-            <p>Ambiente sofisticado e cuidadosamente preparado, gastronomia premium, ativações especiais e momentos de integração para empresários e seus acompanhantes.</p>
+            <h3 class="proof-card__title">Drunch Experiência</h3>
+            <p>Menu de gastronomia premium, apresentação musical ao vivo e degustação de cafés especiais: uma pausa sensorial no meio da jornada.</p>
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ O LUGAR — RESERVA LAGUNA ============ -->
-  <section class="section venue" id="o-lugar" aria-labelledby="venue-heading">
+  <!-- ============ EM VÍDEO ============ -->
+  <section class="section film" id="em-video" aria-labelledby="film-heading">
     <div class="container">
-      <header class="venue__header">
-        <h2 class="section-heading" id="venue-heading">O espaço onde tudo acontece</h2>
-        <p class="venue__kicker">Reserva Laguna · Alphaville Nova Lima</p>
-        <p class="venue__lead">Ambiente sofisticado e cuidadosamente preparado para encontros que exigem presença, conforto e discrição.</p>
-      </header>
-
-      <div class="venue__showcase">
-        <figure class="venue__phone" aria-label="Tour em vídeo do espaço">
-          <div class="venue__video-wrap" data-venue-video data-youtube-id="yseu-tvwvkA">
-            <img
-              class="venue__video-poster"
-              src="https://img.youtube.com/vi/yseu-tvwvkA/hqdefault.jpg"
-              alt="Prévia do tour em vídeo pelo Reserva Laguna"
-              loading="lazy"
-            />
-            <button class="venue__play" type="button" aria-label="Reproduzir tour do espaço no YouTube">
-              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 8l14 8-14 8z" fill="currentColor" stroke="none"/></svg>
-            </button>
-          </div>
-          <figcaption class="venue__caption">
-            Tour pelo espaço
-            <a class="venue__youtube-link" href="https://youtube.com/shorts/yseu-tvwvkA" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
-          </figcaption>
-        </figure>
-
-        <div class="venue__carousel" data-venue-carousel>
-          <p class="venue__gallery-label">Fotos do espaço</p>
-          <div class="venue__carousel-viewport">
-            <div class="venue__track" data-venue-track aria-live="polite">
-              <figure class="venue__slide">
-                <img src="assets/venue/reserva-laguna-01.jpg" alt="Residência de alto padrão no Reserva Laguna ao entardecer" loading="lazy" />
-                <figcaption class="venue__caption">Residência no Reserva Laguna</figcaption>
-              </figure>
-              <figure class="venue__slide">
-                <img src="assets/venue/reserva-laguna-02.jpg" alt="Networking premium entre empresários no ambiente do evento" loading="lazy" />
-                <figcaption class="venue__caption">Networking premium</figcaption>
-              </figure>
-              <figure class="venue__slide">
-                <img src="assets/venue/reserva-laguna-03.jpg" alt="Salão sofisticado preparado para experiência Club Unique" loading="lazy" />
-                <figcaption class="venue__caption">Ambiente de experiência</figcaption>
-              </figure>
-              <figure class="venue__slide">
-                <img src="assets/venue/reserva-laguna-04.jpg" alt="Energia coletiva durante apresentação no evento" loading="lazy" />
-                <figcaption class="venue__caption">Energia do encontro</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="venue__carousel-controls">
-            <button class="venue__nav venue__nav--prev" type="button" data-venue-prev aria-label="Foto anterior">
-              <span aria-hidden="true">Anterior</span>
-            </button>
-            <p class="venue__counter" data-venue-counter aria-live="polite"><span data-venue-current>1</span> / <span data-venue-total>4</span></p>
-            <button class="venue__nav venue__nav--next" type="button" data-venue-next aria-label="Próxima foto">
-              <span aria-hidden="true">Próxima</span>
-            </button>
-          </div>
-
-          <div class="venue__dots" data-venue-dots role="tablist" aria-label="Galeria do local"></div>
+      <div class="film__layout">
+        <div class="film__text">
+          <p class="manifesto__eyebrow">Experience Edition em vídeo</p>
+          <h2 class="section-heading" id="film-heading">Veja como é estar lá.</h2>
+          <p class="film__lead">Recepção com tapete vermelho e música ao vivo, palco, mesas de networking, gastronomia e brindes das marcas parceiras. Assim acontece uma edição do Advisor Elite Club.</p>
+          <ul class="film__list">
+            <li>Ativações exclusivas das marcas parceiras</li>
+            <li>Sorteio de brindes durante a recepção</li>
+            <li>Evento fotografado e filmado, com registros enviados aos participantes</li>
+          </ul>
         </div>
+        <figure class="film__frame">
+          <video class="film__video" controls playsinline preload="none" poster="assets/evento/experience-edition-poster.jpg" width="540" height="710">
+            <source src="assets/evento/experience-edition.mp4" type="video/mp4" />
+            Seu navegador não reproduz vídeos. <a href="assets/evento/experience-edition.mp4">Baixe o vídeo</a>.
+          </video>
+          <figcaption class="film__caption">Advisor Elite Club · Experience Edition</figcaption>
+        </figure>
       </div>
-
-      <footer class="venue__address">
-        <p class="venue__address-text">Condomínio Reserva Laguna, Alphaville Nova Lima, MG</p>
-        <a class="venue__map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Condom%C3%ADnio+Reserva+Laguna+Alphaville+Nova+Lima" target="_blank" rel="noopener">Ver no mapa</a>
-      </footer>
     </div>
   </section>
 
-  <!-- ============ EDIÇÕES ============ -->
-  <section class="section editions" id="edicoes" aria-labelledby="editions-heading">
+  <!-- ============ PROGRAMAÇÃO ============ -->
+  <section class="section programacao" id="programacao" aria-labelledby="programacao-heading">
+    <div class="container container--timeline">
+      <h2 class="section-heading section-heading--peak" id="programacao-heading">Programação oficial</h2>
+      <p class="programacao__lead">Sábado, 12 de dezembro de 2026</p>
+
+      <div class="timeline-wrap">
+        <div class="timeline__spine" aria-hidden="true"><div class="timeline__spine-fill"></div></div>
+        <ol class="timeline" id="timeline">
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M7 12h14v7a7 7 0 0 1-14 0z"/><path d="M21 14h2a3 3 0 0 1 0 6h-2M11 4c0 1.5-2 1.5-2 3M16 4c0 1.5-2 1.5-2 3"/></svg>
+            <span class="timeline__time">A partir das 13h30</span>
+            <span class="timeline__title">Recepção dos participantes</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Boas-vindas, integração e ambientação. Ativações exclusivas das marcas parceiras, soluções diferenciadas e sorteio de brindes. Aproveite para iniciar novas conexões.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><rect x="12" y="4" width="8" height="14" rx="4"/><path d="M8 15a8 8 0 0 0 16 0M16 23v5M12 28h8"/></svg>
+            <span class="timeline__time">14h00 – 14h20</span>
+            <span class="timeline__title">Ambientação</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Apresentação do evento pelo anfitrião Daniel Salomão e da proposta de valor da edição. Explicação das dinâmicas de conexão que acontecem ao longo do dia, com rodadas estratégicas de networking nas mesas.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M5 27h22M8 27V18l5-3 5 5 6-9"/></svg>
+            <span class="timeline__time">14h20 – 16h20</span>
+            <span class="timeline__title">Conteúdo estratégico de gestão</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Temas fundamentais para empresários e líderes que querem crescer de forma sustentável e estratégica, com intervalos de cerca de 10 minutos para networking entre as apresentações.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M9 4v9a4 4 0 0 0 4 4v11M9 4v6M12 4v6M6 4v6M23 4v20M23 4c-3 1.5-4 4.5-4 8s1 6 4 6"/></svg>
+            <span class="timeline__time">16h20 – 17h20</span>
+            <span class="timeline__title">Drunch Experiência</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Experiência gastronômica e sensorial: almoço com menu premium, apresentação musical de alto nível e, para fechar, degustação de cafés especiais.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><circle cx="16" cy="14" r="7"/><path d="M13 27h6M14 24h4M16 4V2"/></svg>
+            <span class="timeline__time">17h20 – 19h00</span>
+            <span class="timeline__title">Conteúdo estratégico de gestão</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Segundo bloco de palestras, com novos intervalos estratégicos para networking e interação natural entre os participantes.</p>
+          </div>
+        </li>
+
+        <li class="timeline__item" data-timeline-item>
+          <div class="timeline__time-col">
+            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M8 6h16l-2 9a6 6 0 0 1-12 0zM16 21v6M11 27h10"/></svg>
+            <span class="timeline__time">19h00 – 20h30</span>
+            <span class="timeline__title">Happy hour com networking</span>
+          </div>
+          <div class="timeline__desc-col">
+            <p>Para selar o evento: boa mesa, boa música e as pessoas certas para consolidar as conexões do dia, celebrar e fortalecer laços.</p>
+          </div>
+        </li>
+      </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESPECIALISTAS ============ -->
+  <section class="section conducao" id="especialistas" aria-labelledby="especialistas-heading">
+    <div class="container">
+      <h2 class="section-heading" id="especialistas-heading">Conheça os especialistas do evento</h2>
+
+      <div class="conducao__layout">
+        <figure class="conducao__media">
+          <img src="assets/especialistas/daniel-salomao.webp" alt="Daniel Salomão, anfitrião do Advisor Elite Club" width="602" height="753" loading="lazy" />
+        </figure>
+        <div class="conducao__block">
+          <div class="conducao__identity">
+            <span class="conducao__mark" aria-hidden="true"></span>
+            <span class="conducao__role">Anfitrião e mestre de cerimônias</span>
+            <h3 class="conducao__name">Daniel Salomão</h3>
+          </div>
+          <p class="conducao__bio">
+            Empresário, palestrante e especialista em networking estratégico e experiência do cliente.
+            Fundador e estrategista das cinco unidades do Mapa do Lucro e do Advisor Elite Club, cria
+            conexões de alto valor que viram oportunidades de negócio, crescimento sustentável e resultados reais.
+          </p>
+          <ul class="social-links" aria-label="Instagram de Daniel Salomão">
+            <li><a href="https://www.instagram.com/danielsalomaoestrategista/" target="_blank" rel="noopener noreferrer">@danielsalomaoestrategista</a></li>
+            <li><a href="https://www.instagram.com/advisoreliteclub/" target="_blank" rel="noopener noreferrer">@advisoreliteclub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="speakers__label">Palestrantes convidados</p>
+      <ul class="speakers__grid">
+        <li class="speaker-card">
+          <figure class="speaker-card__media">
+            <img src="assets/especialistas/joao-oka.webp" alt="João Oka" width="360" height="450" loading="lazy" />
+          </figure>
+          <div class="speaker-card__body">
+            <h3 class="speaker-card__name">João Oka</h3>
+            <p class="speaker-card__role">Empresário, investidor e CEO da Way Capital</p>
+            <p class="speaker-card__talk-label">Palestra</p>
+            <p class="speaker-card__talk">Capital Inteligente</p>
+            <p class="speaker-card__theme">Como acelerar o crescimento da sua empresa usando recursos financeiros de forma estratégica.</p>
+            <details class="speaker-card__more">
+              <summary>Trajetória</summary>
+              <p>Mais de 12 anos à frente de grandes projetos de mineração, engenharia e estratégia financeira. Destacou-se pela liderança em gestão comercial e escalabilidade de vendas, conduzindo transações financeiras e estratégias de capital de alto impacto.</p>
+            </details>
+            <a class="speaker-card__social" href="https://www.instagram.com/joaookaa/" target="_blank" rel="noopener noreferrer">@joaookaa</a>
+          </div>
+        </li>
+
+        <li class="speaker-card">
+          <figure class="speaker-card__media">
+            <img src="assets/especialistas/jacque-gomes.webp" alt="Jacque Gomes" width="640" height="800" loading="lazy" />
+          </figure>
+          <div class="speaker-card__body">
+            <h3 class="speaker-card__name">Jacque Gomes</h3>
+            <p class="speaker-card__role">Empresária, CEO, conselheira estratégica, palestrante internacional e escritora</p>
+            <p class="speaker-card__talk-label">Palestra</p>
+            <p class="speaker-card__talk">Os Sete Passos da Jornada do Empresário Extraordinário</p>
+            <p class="speaker-card__theme">A matemática do reposicionamento, o visual adequado, a vitrine digital e a inteligência emocional necessária para sustentar grandes realizações.</p>
+            <details class="speaker-card__more">
+              <summary>Trajetória</summary>
+              <p>Mais de 20 anos de experiência em gestão e liderança. Atua na formação e no desenvolvimento de empresários e CEOs, conectando autogoverno, liderança, estratégia, posicionamento e governança para construir negócios mais estruturados, lucrativos e sustentáveis.</p>
+            </details>
+            <a class="speaker-card__social" href="https://www.instagram.com/ajacquegomes/" target="_blank" rel="noopener noreferrer">@ajacquegomes</a>
+          </div>
+        </li>
+
+        <li class="speaker-card">
+          <figure class="speaker-card__media">
+            <img src="assets/especialistas/kelly-maia.webp" alt="Kelly Maia" width="640" height="800" loading="lazy" />
+          </figure>
+          <div class="speaker-card__body">
+            <h3 class="speaker-card__name">Kelly Maia</h3>
+            <p class="speaker-card__role">Empresária, mestre em Engenharia Ambiental e fundadora da Ecogênese Soluções Integradas</p>
+            <p class="speaker-card__talk-label">Palestra</p>
+            <p class="speaker-card__talk">Do Sonho ao Legado</p>
+            <p class="speaker-card__theme">A blindagem jurídica, a gestão rigorosa de riscos (PGR/PCMSO) e o controle de passivos necessários para sustentar um posicionamento estratégico e perene.</p>
+            <details class="speaker-card__more">
+              <summary>Trajetória</summary>
+              <p>Há mais de 22 anos atua em meio ambiente, saúde ocupacional, segurança, qualidade e gestão empresarial, ajudando empresas a reduzir riscos, fortalecer operações e crescer de forma mais segura e sustentável.</p>
+            </details>
+          </div>
+        </li>
+
+        <li class="speaker-card">
+          <figure class="speaker-card__media">
+            <img src="assets/especialistas/gabriel-diniz.webp" alt="Gabriel Diniz" width="512" height="640" loading="lazy" />
+          </figure>
+          <div class="speaker-card__body">
+            <h3 class="speaker-card__name">Gabriel Diniz</h3>
+            <p class="speaker-card__role">CEO da Upsend Brasil, pioneira em GEO no país</p>
+            <p class="speaker-card__talk-label">Palestra</p>
+            <p class="speaker-card__talk">Venda mais, gastando menos! Domine o comportamento de consumo</p>
+            <p class="speaker-card__theme">Como adaptar o seu negócio ao consumo impulsionado pela IA e pelo GEO (Generative Engine Optimization), reduzir a dependência de anúncios de interrupção e tornar sua marca a resposta recomendada pelo Google, ChatGPT e Gemini.</p>
+            <details class="speaker-card__more">
+              <summary>Trajetória</summary>
+              <p>À frente da Upsend Brasil, empresa pioneira no país em GEO, a tecnologia que faz empresas serem recomendadas pelas inteligências artificiais. Mostra como essa inovação está mudando as regras do jogo, reduzindo custos e transformando empresas na resposta exata para o cliente.</p>
+            </details>
+            <a class="speaker-card__social" href="https://www.instagram.com/diniz.online/" target="_blank" rel="noopener noreferrer">@diniz.online</a>
+          </div>
+        </li>
+
+        <li class="speaker-card">
+          <figure class="speaker-card__media">
+            <img src="assets/especialistas/herbran-hermidas.webp" alt="Herbran Hermidas" width="520" height="650" loading="lazy" />
+          </figure>
+          <div class="speaker-card__body">
+            <h3 class="speaker-card__name">Herbran Hermidas</h3>
+            <p class="speaker-card__role">Administrador, à frente de negócios do BE Group, Hermidas Finance Digital e Grupo GEX</p>
+            <p class="speaker-card__talk-label">Palestra</p>
+            <p class="speaker-card__talk">Marketing não é sobre postar. É sobre construir uma marca que vende todos os dias.</p>
+            <p class="speaker-card__theme">Ter presença nas redes não significa ter um negócio lucrativo. Como transformar marketing em estratégia de crescimento, posicionamento e geração de resultados.</p>
+            <details class="speaker-card__more">
+              <summary>Trajetória</summary>
+              <p>MBAs em Finanças e Controladoria e em Metaverso, com pós-graduações em Gestão de Projetos e Gestão de Saúde. Mais de 20 anos em gestão estratégica, financeira e empresarial, com passagem pela direção de instituições de ensino superior e por grandes players de infoprodutos e nutracêuticos. Nos últimos 12 meses, geriu operações digitais que movimentaram mais de R$ 130 milhões em faturamento.</p>
+            </details>
+            <a class="speaker-card__social" href="https://www.instagram.com/herbran/" target="_blank" rel="noopener noreferrer">@herbran</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ EDIÇÕES (prova social) ============ -->
+  <section class="section editions prova-social" id="prova_social" aria-labelledby="editions-heading">
     <div class="container">
       <header class="editions__header">
-        <h2 class="section-heading" id="editions-heading">Edições em destaque</h2>
+        <h2 class="section-heading" id="editions-heading">Edições Experience Edition</h2>
         <p class="editions__subtitle">Realizadas e por vir</p>
       </header>
 
@@ -233,10 +436,8 @@
               <img src="assets/edicao-alphaville.jpg" alt="Networking entre empresários, arredores de Alphaville e Nova Lima" loading="lazy" />
             </div>
             <div class="edition-card__body">
-              <span class="badge">Uma experiência exclusiva para empresários de alto nível</span>
               <p class="edition-card__date">Sábado, 26 de julho de 2026</p>
               <p class="edition-card__place">Arredores de Alphaville &amp; Nova Lima</p>
-              <p class="edition-card__past-note">Esta edição já aconteceu.</p>
             </div>
           </article>
 
@@ -246,33 +447,42 @@
               <img src="assets/venue/reserva-laguna-01.jpg" alt="Condomínio Reserva Laguna, Alphaville Nova Lima" loading="lazy" />
             </div>
             <div class="edition-card__body">
-              <span class="badge">Empresários, líderes e suas famílias</span>
               <p class="edition-card__date">Sábado, 22 de agosto de 2026</p>
-              <p class="edition-card__place">Alphaville Nova Lima, Condomínio Reserva Laguna</p>
-              <p class="edition-card__past-note">Esta edição já aconteceu.</p>
+              <p class="edition-card__place">Reserva Laguna · Alphaville Nova Lima</p>
+            </div>
+          </article>
+
+          <article class="edition-card edition-card--past edition-card--compact" aria-label="Edição de outubro, já realizada">
+            <span class="edition-card__ribbon">Edição realizada</span>
+            <div class="edition-card__media">
+              <img src="assets/venue/reserva-laguna-04.jpg" alt="Energia coletiva durante apresentação no evento" loading="lazy" />
+            </div>
+            <div class="edition-card__body">
+              <p class="edition-card__date">Sábado, 24 de outubro de 2026</p>
+              <p class="edition-card__place">Reserva Laguna · Alphaville Nova Lima</p>
             </div>
           </article>
         </div>
 
         <article class="edition-card edition-card--featured edition-card--next">
           <div class="edition-card__media">
-            <img src="assets/venue/reserva-laguna-04.jpg" alt="Condomínio Reserva Laguna, Alphaville Nova Lima" loading="lazy" />
+            <img src="assets/evento/casa-proxima-edicao.webp" alt="Casa de alto padrão iluminada ao entardecer, com piscina e área externa" width="792" height="594" loading="lazy" />
           </div>
           <div class="edition-card__body">
             <span class="edition-card__next-label">Próxima edição</span>
-            <span class="badge">Empresários, líderes e suas famílias</span>
-            <p class="edition-card__date">Sábado, 24 de outubro de 2026</p>
-            <p class="edition-card__place">Alphaville Nova Lima, Condomínio Reserva Laguna</p>
-            <p class="edition-card__access">Acesso exclusivo mediante convite</p>
-            <p class="edition-card__quote">"Um novo encontro para fortalecer negócios, relacionamentos e legado."</p>
+            <span class="badge">Empresários, decisores e investidores</span>
+            <p class="edition-card__date">Sábado, 12 de dezembro de 2026</p>
+            <p class="edition-card__place">Belo Horizonte · 13h30 às 20h30</p>
+            <p class="edition-card__access">Local revelado aos participantes confirmados</p>
+            <p class="edition-card__quote">"Prometemos um evento impecável."</p>
             <ul class="edition-card__highlights">
-              <li>Gastronomia premium</li>
-              <li>Ativações sensoriais</li>
-              <li>Momentos de integração em família</li>
+              <li>Cinco palestras de gestão e negócios</li>
+              <li>Drunch Experiência com música ao vivo</li>
+              <li>Happy hour com networking</li>
             </ul>
             <div class="edition-card__cta">
-              <p class="edition-card__scarcity">Últimas vagas disponíveis</p>
-              <a class="btn btn--primary edition-card__btn" href="#investimento">Confirmar presença</a>
+              <p class="edition-card__scarcity">Vagas limitadas</p>
+              <a class="btn btn--primary edition-card__btn" href="#investimento">Garantir minha vaga</a>
             </div>
           </div>
         </article>
@@ -280,143 +490,64 @@
     </div>
   </section>
 
-  <!-- ============ PROGRAMAÇÃO ============ -->
-  <section class="section programacao" aria-labelledby="programacao-heading">
-    <div class="container container--timeline">
-      <h2 class="section-heading section-heading--peak" id="programacao-heading">O dia se desenha assim</h2>
-
-      <div class="timeline-wrap">
-        <div class="timeline__spine" aria-hidden="true"><div class="timeline__spine-fill"></div></div>
-        <ol class="timeline" id="timeline">
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><rect x="9" y="6" width="14" height="20" rx="2"/><circle cx="16" cy="14" r="3"/><path d="M12 22h8"/></svg>
-            <span class="timeline__time">08h40 – 09h00</span>
-            <span class="timeline__title">Credenciamento</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Recepção e credenciamento dos convidados.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M7 12h14v7a7 7 0 0 1-14 0z"/><path d="M21 14h2a3 3 0 0 1 0 6h-2M11 4c0 1.5-2 1.5-2 3M16 4c0 1.5-2 1.5-2 3"/></svg>
-            <span class="timeline__time">09h00 – 09h40</span>
-            <span class="timeline__title">Recepção &amp; Open Networking</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Welcome Coffee Premium, ambientação sofisticada, música ambiente elegante e open networking guiado, com experiências de conexão entre empresários.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><rect x="12" y="4" width="8" height="14" rx="4"/><path d="M8 15a8 8 0 0 0 16 0M16 23v5M12 28h8"/></svg>
-            <span class="timeline__time">09h40 – 10h00</span>
-            <span class="timeline__title">Abertura oficial da experiência</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Abertura conduzida por Daniel Salomão, com apresentação da proposta, alinhamento de jornada e introdução aos conteúdos e conexões do dia.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M5 27h22M8 27V18l5-3 5 5 6-9"/></svg>
-            <span class="timeline__time">10h00 – 13h00</span>
-            <span class="timeline__title">Jornada estratégica, manhã</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Conteúdos estratégicos sobre crescimento, expansão, inteligência de mercado, performance, posicionamento, conexões de alto valor e inovação aplicada aos negócios. Interações estratégicas com empresários e líderes.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M9 4v9a4 4 0 0 0 4 4v11M9 4v6M12 4v6M6 4v6M23 4v20M23 4c-3 1.5-4 4.5-4 8s1 6 4 6"/></svg>
-            <span class="timeline__time">13h00 – 14h00</span>
-            <span class="timeline__title">Almoço Experience: gastronomia, conhecimento e vinculação</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Experiência gastronômica autoral com conteúdo especial conduzido por Daniel Salomão sobre vinculação emocional com clientes, fidelização, conexões estratégicas e o valor dos eventos premium para posicionamento, autoridade e geração de negócios.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M16 5l3.5 7.2L27 13.4l-5.5 5.3L23 26l-7-3.7L9 26l1.5-7.3L5 13.4l7.5-1.2z"/></svg>
-            <span class="timeline__time">14h00 – 14h40</span>
-            <span class="timeline__title">Experiências &amp; ativações premium</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Ativações de marca e experiências sensoriais conduzidas por parceiros convidados. Atmosfera dinâmica para ampliação de conexões e novos relacionamentos.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><circle cx="16" cy="14" r="7"/><path d="M13 27h6M14 24h4M16 4V2"/></svg>
-            <span class="timeline__time">14h40 – 16h00</span>
-            <span class="timeline__title">Jornada estratégica, tarde</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Conteúdos avançados sobre gestão, escala, liderança, autoridade, vendas estratégicas e crescimento sustentável. Trocas estratégicas e conexões de alto nível.</p>
-          </div>
-        </li>
-
-        <li class="timeline__item" data-timeline-item>
-          <div class="timeline__time-col">
-            <svg viewBox="0 0 32 32" class="icon icon--sm" aria-hidden="true"><path d="M6 8l6 6-4 12M26 8l-6 6 4 12M12 14h8"/></svg>
-            <span class="timeline__time">16h00 – 17h30</span>
-            <span class="timeline__title">Networking premium &amp; encerramento</span>
-          </div>
-          <div class="timeline__desc-col">
-            <p>Networking guiado, experiências finais e encerramento da jornada com conexões e oportunidades reais.</p>
-          </div>
-        </li>
-      </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONDUÇÃO ============ -->
-  <section class="section conducao" aria-labelledby="conducao-heading">
+  <!-- ============ GUIA DO PARTICIPANTE ============ -->
+  <section class="section guide" id="guia" aria-labelledby="guide-heading">
     <div class="container">
-      <div class="conducao__layout">
-        <figure class="conducao__media">
-          <img src="assets/fotoPreletor.jpeg" alt="Daniel Salomão, condução da experiência Club Unique" loading="lazy" />
-        </figure>
-        <div class="conducao__block">
-          <div class="conducao__identity">
-            <span class="conducao__mark" aria-hidden="true"></span>
-            <span class="conducao__role">Condução da experiência</span>
-            <h2 class="conducao__name" id="conducao-heading">Daniel Salomão</h2>
-          </div>
-          <p class="conducao__bio">
-            Especialista em criar ambientes de negócios altamente conectivos e estratégicos.
-            A experiência será conduzida por Daniel Salomão, ao lado de parceiros especialistas convidados.
-          </p>
-        </div>
+      <h2 class="section-heading" id="guide-heading">Antes de chegar</h2>
+      <p class="guide__lead">O essencial do Manual do Participante para você aproveitar cada momento.</p>
+
+      <ul class="guide__grid">
+        <li class="guide__item">
+          <span class="guide__label">Chegada e recepção</span>
+          <p>Recepção a partir das 13h30. Chegue no horário para aproveitar as ativações de abertura, a integração e os brindes das marcas participantes. Não é preciso apresentar documento de identificação.</p>
+        </li>
+        <li class="guide__item">
+          <span class="guide__label">Dress code</span>
+          <p><strong>Esporte fino.</strong> Elegância, profissionalismo e conforto, sem obrigatoriedade de blazer, terno completo ou gravata.</p>
+        </li>
+        <li class="guide__item">
+          <span class="guide__label">Estacionamento</span>
+          <p>O local não tem estacionamento próprio, mas há facilidade de parada na região, com ambiente monitorado e segurança durante todo o evento.</p>
+        </li>
+        <li class="guide__item">
+          <span class="guide__label">Conduta e imagem</span>
+          <p>Pontualidade, celular no silencioso durante as palestras e respeito à confidencialidade das conversas de negócios. O evento é fotografado e filmado, e os registros são enviados aos participantes.</p>
+        </li>
+      </ul>
+
+      <div class="guide__contact">
+        <p class="guide__contact-title">Contato da organização</p>
+        <ul class="guide__contact-list">
+          <li>
+            <span class="guide__contact-role">Responsável</span>
+            <span class="guide__contact-name">Daniel Salomão</span>
+            <a href="https://wa.me/5531992086846" target="_blank" rel="noopener noreferrer">(31) 99208-6846</a>
+          </li>
+          <li>
+            <span class="guide__contact-role">Diretora de relacionamento</span>
+            <span class="guide__contact-name">Lorena Duarte</span>
+            <a href="https://wa.me/5531975554095" target="_blank" rel="noopener noreferrer">(31) 97555-4095</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ============ PONTE DE CONFIANÇA ============ -->
-  <section class="section trust-bridge" aria-label="Por que confirmar presença">
+  <section class="section trust-bridge" aria-label="Resumo da edição">
     <div class="container">
       <ul class="trust-bridge__grid">
         <li>
           <span class="trust-bridge__label">Público</span>
-          <span class="trust-bridge__value">Empresários e líderes da região</span>
+          <span class="trust-bridge__value">Empresários, decisores e investidores</span>
         </li>
         <li>
           <span class="trust-bridge__label">Local</span>
-          <span class="trust-bridge__value">Reserva Laguna · Alphaville</span>
+          <span class="trust-bridge__value">Belo Horizonte · 12 de dezembro</span>
         </li>
         <li>
-          <span class="trust-bridge__label">Condução</span>
-          <span class="trust-bridge__value">Daniel Salomão</span>
+          <span class="trust-bridge__label">Conteúdo</span>
+          <span class="trust-bridge__value">Daniel Salomão e 5 especialistas</span>
         </li>
       </ul>
     </div>
@@ -427,17 +558,17 @@
     <div class="container">
       <div class="investimento__content">
         <header class="investimento__header">
-          <h2 class="section-heading section-heading--peak" id="investimento-heading">Confirmar presença</h2>
+          <h2 class="section-heading section-heading--peak" id="investimento-heading">Garanta sua vaga</h2>
           <p class="investimento__kicker">Este convite é pessoal e intransferível.</p>
-          <p class="investimento__lead">Garanta sua vaga na Experience Edition de outubro no Reserva Laguna.</p>
+          <p class="investimento__lead">Confirme sua participação na Experience Edition de dezembro em Belo Horizonte.</p>
         </header>
 
         <div class="invest-panel">
           <div class="invest-panel__main">
             <div class="invest-panel__edition">
               <span class="invest-panel__edition-label">Próxima edição</span>
-              <p class="invest-panel__edition-date">Sábado, 24 de outubro de 2026</p>
-              <p class="invest-panel__edition-place">Reserva Laguna · Alphaville Nova Lima</p>
+              <p class="invest-panel__edition-date">Sábado, 12 de dezembro de 2026</p>
+              <p class="invest-panel__edition-place">Belo Horizonte · 13h30 às 20h30</p>
             </div>
 
             <div class="invest-panel__value">
@@ -457,12 +588,12 @@
               </li>
               <li>
                 <span class="invest-panel__step-num" aria-hidden="true">03</span>
-                <span>Aguarde a confirmação da equipe em até 24 horas com orientações de acesso ao evento</span>
+                <span>Aguarde a confirmação da equipe em até 24 horas, com o endereço e as orientações de acesso</span>
               </li>
             </ol>
 
-            <p class="invest-panel__reassurance">Após o pagamento, nossa equipe confirma sua vaga e envia as orientações finais por mensagem.</p>
-            <p class="invest-panel__support">Em caso de dúvidas sobre pagamento, fale com quem compartilhou este convite.</p>
+            <p class="invest-panel__reassurance">Após o pagamento, nossa equipe confirma sua vaga e envia o local e as orientações finais por mensagem.</p>
+            <p class="invest-panel__support">Dúvidas sobre pagamento? Fale com Lorena Duarte pelo WhatsApp <a href="https://wa.me/5531975554095" target="_blank" rel="noopener noreferrer">(31) 97555-4095</a>.</p>
             <p class="invest-panel__note">Vagas limitadas. Este convite é pessoal e intransferível.</p>
           </div>
 
@@ -492,15 +623,15 @@
 
   <!-- ============ FECHAMENTO ============ -->
   <section class="section closing" aria-label="Encerramento">
-    <p class="closing__line">"Conexões que transformam. Experiências que ficam. Negócios que crescem. Famílias que evoluem juntas."</p>
-    <p class="closing__tagline">Um dia para conectar, aprender e elevar seu legado.</p>
-    <a class="btn btn--outline closing__cta" href="#investimento">Confirmar presença</a>
+    <p class="closing__line">"Que seja um dia de conexões relevantes, experiências memoráveis, aprendizados valiosos e novas oportunidades para a sua trajetória."</p>
+    <p class="closing__tagline">Prometemos um evento impecável. Nos vemos lá.</p>
+    <a class="btn btn--outline closing__cta" href="#investimento">Garantir minha vaga</a>
   </section>
 
 </main>
 
 <div class="sticky-cta" data-sticky-cta hidden>
-  <a class="btn btn--primary sticky-cta__btn" href="#investimento">Confirmar presença</a>
+  <a class="btn btn--primary sticky-cta__btn" href="#investimento">Garantir minha vaga · R$ 690</a>
 </div>
 
 <script src="js/main.js"></script>
