@@ -85,19 +85,17 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .programacao { padding-block: clamp(7rem, 14vw, 11rem); }
 .conducao { padding-block: clamp(5rem, 10vw, 7.5rem); }
 .guide { padding-block: clamp(4rem, 8vw, 6rem) clamp(4rem, 8vw, 5.5rem); }
-.trust-bridge { padding-block: 0 clamp(2rem, 4vw, 3rem); margin-top: -1rem; }
-.investimento { padding-block: clamp(4rem, 8vw, 6rem) clamp(6rem, 12vw, 9rem); }
+.trust-bridge { padding-block: clamp(2.5rem, 5vw, 3.5rem); }
 
 /* ---------- Fold transitions ----------
    Each fold opens on a gold hairline that brightens toward the centre,
    crowned by a small diamond, with a warm glow spilling down into the
-   section. The trust bridge and the payment panel read as one block,
-   so the line is skipped between them. */
-main > .section:not(.investimento) {
+   section. */
+main > .section {
   background-image: radial-gradient(ellipse 55% 220px at 50% 0%, rgba(205, 164, 94, 0.075), transparent 75%);
   background-repeat: no-repeat;
 }
-main > .section:not(.investimento)::before {
+main > .section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -115,7 +113,7 @@ main > .section:not(.investimento)::before {
     transparent 100%);
   pointer-events: none;
 }
-main > .section:not(.investimento)::after {
+main > .section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -139,14 +137,17 @@ main > .section.programacao,
 main > .section.editions {
   background-image: radial-gradient(ellipse 65% 320px at 50% 0%, rgba(205, 164, 94, 0.11), transparent 75%);
 }
+/* The trust bridge introduces the final call, so they share one fold. */
+main > .trust-bridge + .section.closing::before,
+main > .trust-bridge + .section.closing::after { display: none; }
+main > .trust-bridge + .section.closing {
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  background-image: radial-gradient(ellipse 50% 60% at 50% 100%, rgba(205, 164, 94, 0.09), transparent 70%);
+}
 main > .section.closing {
   background-image:
     radial-gradient(ellipse 65% 320px at 50% 0%, rgba(205, 164, 94, 0.11), transparent 75%),
     radial-gradient(ellipse 50% 60% at 50% 100%, rgba(205, 164, 94, 0.09), transparent 70%);
-}
-main > .section.investimento {
-  background-image: radial-gradient(ellipse 60% 60% at 50% 55%, rgba(205, 164, 94, 0.07), transparent 70%);
-  background-repeat: no-repeat;
 }
 
 .section-heading {
@@ -549,6 +550,10 @@ main > .section.investimento {
 /* ==========================================================================
    PROOFS — concrete moments (distilled from generic benefits)
    ========================================================================== */
+.proofs .section-heading,
+.programacao .section-heading { margin-inline: auto; text-align: center; }
+.proofs__lead { text-align: center; margin-inline: auto; }
+.programacao__lead { text-align: center; }
 .proofs__lead {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -835,6 +840,8 @@ main > .section.investimento {
    ========================================================================== */
 .timeline-wrap {
   position: relative;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
 .timeline {
@@ -845,7 +852,7 @@ main > .section.investimento {
 }
 .timeline__spine {
   position: absolute;
-  left: clamp(120px, 22%, 220px);
+  left: 50%;
   top: 6px; bottom: 6px;
   width: 1px;
   background: rgba(205,164,94,0.2);
@@ -861,8 +868,8 @@ main > .section.investimento {
 }
 .timeline__item {
   display: grid;
-  grid-template-columns: clamp(120px, 22%, 220px) 1fr;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
 }
 .js .timeline__item {
   opacity: 0;
@@ -875,7 +882,9 @@ main > .section.investimento {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.5rem;
+  text-align: right;
 }
 .timeline__time-col .icon {
   position: relative;
@@ -893,11 +902,12 @@ main > .section.investimento {
   font-size: 1.05rem;
   color: var(--text);
 }
-.timeline__desc-col p { font-size: 0.92rem; color: var(--text-muted); max-width: 52ch; }
+.timeline__desc-col p { font-size: 0.92rem; color: var(--text-muted); max-width: 44ch; }
 
 @media (max-width: 640px) {
   .timeline__spine { left: 11px; }
   .timeline__item { grid-template-columns: 1fr; gap: 0.75rem; padding-left: 2.25rem; position: relative; }
+  .timeline__time-col { align-items: flex-start; text-align: left; }
   .timeline__time-col .icon { position: absolute; left: -2.25rem; top: 0; background: var(--bg); }
 }
 
@@ -1465,253 +1475,11 @@ main > .section.investimento {
 }
 
 /* ==========================================================================
-   INVESTIMENTO
-   ========================================================================== */
-.investimento__content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.investimento .section-heading {
-  max-width: none;
-  width: 100%;
-  margin-bottom: 0.75rem;
-}
-
-.investimento__header { margin-bottom: clamp(2rem, 4vw, 2.75rem); }
-
-.investimento__kicker {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
-}
-
-.investimento__lead {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  max-width: 58ch;
-  line-height: 1.65;
-}
-
-.invest-panel {
-  border: var(--line-hair) solid var(--gold);
-  padding: clamp(2.5rem, 4.5vw, 4rem);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 2rem clamp(2rem, 5vw, 3.5rem);
-}
-.invest-panel__main { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem; }
-
-.invest-panel__edition {
-  padding-bottom: 1.25rem;
-  border-bottom: var(--line-hair) solid rgba(205, 164, 94, 0.3);
-}
-
-.invest-panel__edition-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.invest-panel__edition-date {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  color: var(--text);
-  margin-bottom: 0.25rem;
-}
-
-.invest-panel__edition-place {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.invest-panel__value { display: flex; flex-direction: column; gap: 0.4rem; }
-.invest-panel__label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-.invest-panel__amount {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: clamp(1.85rem, 6vw, 3rem);
-  color: var(--gold-bright);
-}
-.invest-panel__ext { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); }
-
-.invest-panel__steps {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-}
-
-.invest-panel__steps li {
-  display: flex;
-  align-items: baseline;
-  gap: 0.85rem;
-  font-size: 0.92rem;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.invest-panel__step-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--gold-bright);
-  flex-shrink: 0;
-}
-
-.invest-panel__reassurance {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1rem;
-  line-height: 1.55;
-  color: var(--gold-bright);
-  max-width: 42ch;
-}
-
-.invest-panel__support {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: var(--text-muted);
-  max-width: 42ch;
-}
-.invest-panel__support a {
-  color: var(--gold-bright);
-  border-bottom: 1px solid rgba(205, 164, 94, 0.45);
-  white-space: nowrap;
-}
-
-.invest-panel__note {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.invest-panel__inline-link {
-  color: var(--gold-bright);
-  text-decoration: underline;
-  text-decoration-color: rgba(232, 201, 138, 0.45);
-  text-underline-offset: 0.15em;
-}
-
-.invest-panel__inline-link:hover,
-.invest-panel__inline-link:focus-visible {
-  color: var(--gold);
-}
-
-.invest-panel__checkin {
-  align-self: flex-start;
-}
-
-.invest-panel__divider { align-self: stretch; width: 1px; background: rgba(205,164,94,0.3); }
-
-.invest-panel__pay {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  justify-content: center;
-}
-
-.invest-panel__pay-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.invest-panel__qrs {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: clamp(1.75rem, 3.5vw, 3rem);
-}
-.qr-block { display: flex; flex-direction: column; align-items: center; gap: 0.65rem; text-align: center; }
-
-.qr-block__option {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.qr-block img {
-  width: clamp(200px, 18vw, 240px);
-  height: clamp(200px, 18vw, 240px);
-  border: var(--line-hair) solid rgba(205,164,94,0.4);
-  padding: 12px;
-  background: var(--text);
-}
-.qr-block figcaption {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-.pix-copy {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--gold);
-  position: relative;
-  padding-bottom: 2px;
-}
-.pix-copy::after {
-  content: "";
-  position: absolute; left: 0; bottom: 0;
-  width: 100%; height: 1px;
-  background: var(--gold);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--dur-micro) var(--ease-expo);
-}
-.pix-copy:hover::after, .pix-copy:focus-visible::after { transform: scaleX(1); }
-.pix-copy[data-copied]::before {
-  content: "Copiado!";
-  position: absolute;
-  left: 50%; top: -1.6em;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  color: var(--gold-bright);
-  white-space: nowrap;
-}
-
-@media (max-width: 760px) {
-  .invest-panel { flex-direction: column; text-align: center; }
-  .invest-panel__main { align-items: center; }
-  .invest-panel__steps { align-items: flex-start; text-align: left; width: 100%; max-width: 320px; }
-  .invest-panel__reassurance { max-width: none; }
-  .invest-panel__divider { width: 100%; height: 1px; }
-  .invest-panel__pay { align-items: center; width: 100%; }
-  .invest-panel__qrs { flex-wrap: wrap; justify-content: center; }
-}
-
-/* ==========================================================================
    CLOSING
    ========================================================================== */
 .closing {
-  padding-block: clamp(4rem, 10vw, 7rem);
+  padding-block: clamp(5rem, 11vw, 8rem) clamp(6rem, 12vw, 9rem);
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1736,6 +1504,14 @@ main > .section.investimento {
   color: var(--text-muted);
   margin: 0;
   max-width: 32ch;
+}
+
+.closing__heading { margin: 0 auto -0.5rem; max-width: none; }
+.closing__notice {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 44ch;
+  margin: -0.75rem 0 0;
 }
 
 /* ---------- Sticky CTA (mobile) ---------- */

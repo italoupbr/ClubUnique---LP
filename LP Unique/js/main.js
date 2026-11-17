@@ -73,48 +73,12 @@
     spineFill.style.transform = "scaleY(1)";
   }
 
-  /* ---------- Pix copy-and-paste ---------- */
-  let pixStatus = document.getElementById("pix-copy-status");
-  if (!pixStatus) {
-    pixStatus = document.createElement("div");
-    pixStatus.id = "pix-copy-status";
-    pixStatus.className = "sr-only";
-    pixStatus.setAttribute("aria-live", "polite");
-    pixStatus.setAttribute("aria-atomic", "true");
-    document.body.appendChild(pixStatus);
-  }
-
-  document.querySelectorAll("[data-pix-copy]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const code = button.getAttribute("data-pix-copy");
-      try {
-        await navigator.clipboard.writeText(code);
-      } catch (err) {
-        const textarea = document.createElement("textarea");
-        textarea.value = code;
-        textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-      }
-      button.setAttribute("data-copied", "");
-      pixStatus.textContent = "Código Pix copiado.";
-      window.clearTimeout(button._copyTimeout);
-      button._copyTimeout = window.setTimeout(() => {
-        button.removeAttribute("data-copied");
-        pixStatus.textContent = "";
-      }, 1800);
-    });
-  });
-
   /* ---------- Sticky CTA — mobile, after hero scroll ---------- */
   const stickyCta = document.querySelector("[data-sticky-cta]");
   const hero = document.getElementById("hero");
-  const investimento = document.getElementById("investimento");
+  const closing = document.getElementById("garanta-sua-vaga");
 
-  if (stickyCta && hero && investimento && "IntersectionObserver" in window) {
+  if (stickyCta && hero && closing && "IntersectionObserver" in window) {
     let heroPassed = false;
     let investVisible = false;
 
@@ -141,6 +105,6 @@
     );
 
     heroObserver.observe(hero);
-    investObserver.observe(investimento);
+    investObserver.observe(closing);
   }
 })();
