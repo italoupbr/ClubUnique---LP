@@ -1,4 +1,4 @@
-# Contrato Upsend — Homepage Club Unique
+# Contrato Upsend — Homepage Advisor Elite Club
 
 Este documento é a **fonte de verdade** para qualquer geração ou edição de `index.html` (Site Studio, Cursor, ou manual).  
 Se o HTML não cumprir este contrato, **não publique** — a auditoria Upsend bloqueia.
@@ -24,19 +24,21 @@ node scripts/validate-upsend-homepage.mjs "LP Unique/index.html"
 - Dentro do hero, **antes do `<h1>`**, como primeiro parágrafo de conteúdo editorial.
 - Classe **e** id obrigatórios: `class="geo-answer" id="geo-answer"`.
 
-### Conteúdo (tokens fixos Club Unique)
+### Conteúdo (tokens fixos Advisor Elite Club)
+
+> Desde a edição de 12/12/2026 a marca é **Advisor Elite Club** (antes: Club Unique) e a cidade é **Belo Horizonte**. Os tokens ficam no topo de `scripts/validate-upsend-homepage.mjs`.
 
 | Token | Valor obrigatório |
 |-------|-------------------|
-| **Entidade** | `Club Unique` |
+| **Entidade** | `Advisor Elite Club` |
 | **Categoria** | `evento empresarial exclusivo` (ou `encontro empresarial exclusivo`) |
-| **Cidade** | `Alphaville Nova Lima` |
+| **Cidade** | `Belo Horizonte` |
 
 ### Template (copiar estrutura, não improvisar)
 
 ```html
 <p class="geo-answer" id="geo-answer">
-  O <strong>Club Unique</strong> Experience Edition é um <strong>evento empresarial exclusivo</strong> em <strong>Alphaville Nova Lima</strong>, no Condomínio Reserva Laguna, para empresários, líderes e suas famílias.
+  O <strong>Advisor Elite Club</strong> Experience Edition é um <strong>evento empresarial exclusivo</strong> em <strong>Belo Horizonte</strong> que reúne empresários, decisores, investidores e grandes players do mercado.
 </p>
 ```
 
@@ -61,10 +63,10 @@ node scripts/validate-upsend-homepage.mjs "LP Unique/index.html"
 
 ### Conteúdo mínimo (4 itens factuais)
 
-1. **Edição anterior** — julho/2026, Alphaville & Nova Lima (realizada).
-2. **Próximo encontro** — 22 de agosto de 2026, Reserva Laguna.
-3. **Público** — empresários, líderes e famílias; convite exclusivo.
-4. **Condução** — Daniel Salomão + parceiros.
+1. **Edições realizadas** — julho, agosto e outubro de 2026.
+2. **Próximo encontro** — 12 de dezembro de 2026, Belo Horizonte.
+3. **Público** — empresários, decisores e investidores; convite exclusivo.
+4. **Condução** — Daniel Salomão + especialistas convidados.
 
 ### Template estrutural
 
@@ -107,11 +109,11 @@ Incluir **sempre** no prompt de geração:
 ```
 CONTRATO UPSEND (obrigatório, não omitir):
 1. Inserir <p class="geo-answer" id="geo-answer"> no hero ANTES do h1, com:
-   - Entidade: Club Unique
+   - Entidade: Advisor Elite Club
    - Categoria: evento empresarial exclusivo
-   - Cidade: Alphaville Nova Lima
+   - Cidade: Belo Horizonte
 2. Inserir <section id="prova_social" class="prova-social"> antes do fechamento/convite,
-   com 4 itens: edição julho realizada, edição agosto Reserva Laguna, público, Daniel Salomão.
+   com edições realizadas, próxima edição (12/12/2026, Belo Horizonte), público e Daniel Salomão.
 3. Validar: node scripts/validate-upsend-homepage.mjs
 Referência: docs/UPsend-HOMEPAGE-CONTRACT.md e templates/homepage-upsend.reference.html
 ```

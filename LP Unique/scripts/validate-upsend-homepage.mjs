@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Valida contrato Upsend para homepage Club Unique.
+ * Valida contrato Upsend para a homepage do Advisor Elite Club (Experience Edition).
  * Usage: node scripts/validate-upsend-homepage.mjs [path/to/index.html]
  */
 
@@ -11,6 +11,10 @@ const target = resolve(process.argv[2] ?? "LP Unique/index.html");
 const html = readFileSync(target, "utf8");
 
 const errors = [];
+
+// Tokens do geo-answer. Atualize aqui se a marca ou a cidade da edição mudar.
+const ENTITY = "advisor elite club";
+const CITY = "belo horizonte";
 
 const hasGeoBlock =
   /id=["']geo-answer["']/i.test(html) || /class=["'][^"']*geo-answer/i.test(html);
@@ -38,17 +42,17 @@ const visibleText = bodyInner
 
 const first60Words = visibleText.split(/\s+/).slice(0, 60).join(" ").toLowerCase();
 
-const entityOk = first60Words.includes("club unique");
-const cityOk = first60Words.includes("alphaville nova lima");
+const entityOk = first60Words.includes(ENTITY);
+const cityOk = first60Words.includes(CITY);
 const categoryOk =
   first60Words.includes("evento empresarial exclusivo") ||
   first60Words.includes("encontro empresarial exclusivo");
 
 if (!entityOk) {
-  errors.push('Primeiras 60 palavras: falta entidade "Club Unique".');
+  errors.push(`Primeiras 60 palavras: falta entidade "${ENTITY}".`);
 }
 if (!cityOk) {
-  errors.push('Primeiras 60 palavras: falta cidade "Alphaville Nova Lima".');
+  errors.push(`Primeiras 60 palavras: falta cidade "${CITY}".`);
 }
 if (!categoryOk) {
   errors.push(
