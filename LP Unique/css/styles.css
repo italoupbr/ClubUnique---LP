@@ -72,7 +72,6 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   padding-inline: clamp(1.25rem, 5vw, 3rem);
 }
 .container--narrow { max-width: 640px; }
-.container--timeline { max-width: 1100px; }
 
 .section { position: relative; }
 
@@ -82,7 +81,6 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .proofs { padding-block: clamp(3rem, 6vw, 4.5rem) clamp(5rem, 10vw, 7rem); }
 .film { padding-block: clamp(5rem, 10vw, 7.5rem); background-color: var(--bg-panel); }
 .editions { padding-block: clamp(6rem, 12vw, 9rem); }
-.programacao { padding-block: clamp(7rem, 14vw, 11rem); }
 .conducao { padding-block: clamp(5rem, 10vw, 7.5rem); }
 .guide { padding-block: clamp(4rem, 8vw, 6rem) clamp(4rem, 8vw, 5.5rem); }
 .trust-bridge { padding-block: clamp(2.5rem, 5vw, 3.5rem); }
@@ -133,7 +131,6 @@ main > .section.film {
     radial-gradient(ellipse 70% 50% at 50% 0%, rgba(205, 164, 94, 0.10), transparent 70%),
     radial-gradient(ellipse 60% 40% at 50% 100%, rgba(205, 164, 94, 0.06), transparent 70%);
 }
-main > .section.programacao,
 main > .section.editions {
   background-image: radial-gradient(ellipse 65% 320px at 50% 0%, rgba(205, 164, 94, 0.11), transparent 75%);
 }
@@ -177,9 +174,8 @@ main > .section.closing {
 .icon--sm { width: 22px; height: 22px; }
 
 /* ---------- Reveal system ---------- */
-/* The page authors exactly two motion moments: this orchestrated hero
-   load sequence, and the Programação timeline's scroll-drawn spine.
-   Every other section renders in place — repeating the same fade-up
+/* The page authors a single motion moment: this orchestrated hero
+   load sequence. Every other section renders in place — repeating the same fade-up
    on every section is scattered motion, not a signature. */
 .js [data-reveal] {
   opacity: 0;
@@ -550,10 +546,8 @@ main > .section.closing {
 /* ==========================================================================
    PROOFS — concrete moments (distilled from generic benefits)
    ========================================================================== */
-.proofs .section-heading,
-.programacao .section-heading { margin-inline: auto; text-align: center; }
+.proofs .section-heading { margin-inline: auto; text-align: center; }
 .proofs__lead { text-align: center; margin-inline: auto; }
-.programacao__lead { text-align: center; }
 .proofs__lead {
   font-size: 1.05rem;
   color: var(--text-muted);
@@ -836,82 +830,6 @@ main > .section.closing {
 }
 
 /* ==========================================================================
-   PROGRAMAÇÃO — signature timeline
-   ========================================================================== */
-.timeline-wrap {
-  position: relative;
-  max-width: 960px;
-  margin-inline: auto;
-}
-
-.timeline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
-}
-.timeline__spine {
-  position: absolute;
-  left: 50%;
-  top: 6px; bottom: 6px;
-  width: 1px;
-  background: rgba(205,164,94,0.2);
-}
-.timeline__spine-fill {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: var(--gold);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 120ms linear;
-}
-.timeline__item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-}
-.js .timeline__item {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity var(--dur-reveal) var(--ease-expo), transform var(--dur-reveal) var(--ease-expo);
-}
-.js .timeline__item.is-visible { opacity: 1; transform: translateY(0); }
-
-.timeline__time-col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  text-align: right;
-}
-.timeline__time-col .icon {
-  position: relative;
-  z-index: 1;
-  background: var(--bg);
-}
-.timeline__time {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--gold);
-}
-.timeline__title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--text);
-}
-.timeline__desc-col p { font-size: 0.92rem; color: var(--text-muted); max-width: 44ch; }
-
-@media (max-width: 640px) {
-  .timeline__spine { left: 11px; }
-  .timeline__item { grid-template-columns: 1fr; gap: 0.75rem; padding-left: 2.25rem; position: relative; }
-  .timeline__time-col { align-items: flex-start; text-align: left; }
-  .timeline__time-col .icon { position: absolute; left: -2.25rem; top: 0; background: var(--bg); }
-}
-
-/* ==========================================================================
    CONDUÇÃO
    ========================================================================== */
 .conducao__layout {
@@ -1083,16 +1001,6 @@ main > .section.closing {
 @media (max-width: 860px) {
   .film__layout { grid-template-columns: 1fr; }
   .film__frame { width: min(100%, 360px); }
-}
-
-.programacao__lead {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: -1.5rem;
-  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 /* ==========================================================================
